@@ -51,3 +51,50 @@ header .enlaces-header div.vertical{
     border: 1px solid rgba(0, 0, 0, 0.36);
     height: 30px;
 }
+.tarjetas-home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.tarjeta-home.vinedos{
+    background: url(../imagenes/vinedos-card.png);
+    background-size: cover;
+    background-position: right;
+}
+.tarjeta-home.vinos{
+    background: url(../imagenes/vinos-card.png);
+    background-size: cover;
+    background-position: right;
+}
+.tarjeta-home.exclusivos{
+    background: url(../imagenes/exclusivos-card.png);
+    background-size: cover;
+    background-position: right;
+}
+.tarjeta-home{
+    width: 30%;
+    height: 600px;
+    border-radius: 22px;   
+}
+.tarjeta-home .contenido{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(180, 65, 0, 0.66);
+    transition: all 0.35s ease-in-out;
+    opacity: 0;
+    font-family: 'Ledger';
+    border-radius: 22px;
+}
+.tarjeta-home .contenido a{
+    color: #fff;
+    font-size: 70px;
+}
+
+.tarjeta-home:hover .contenido{
+    opacity: 1;
+}
