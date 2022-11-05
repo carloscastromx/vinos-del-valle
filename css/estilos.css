@@ -279,10 +279,16 @@ h1.vinedos-h1{
     flex-direction: column;
     align-items: flex-end;
 }
+.vinedo-banner.vinedo-banner.vinedo-2{
+    align-items: flex-start;
+}
 .vinedo-banner .contenedor{
     margin: 0;
     width: auto;
     padding: 0 230px 100px 0;
+}
+.vinedo-banner.vinedo-2 .contenedor{
+    padding: 0 0 100px 130px;
 }
 .vinedo-banner h2{
     font-size: 50px;
