@@ -242,3 +242,71 @@ footer .datos-footer .copyright{
     width: 370px;
     text-align: center;
 }
+h1.vinedos-h1, .nuestros-vinedos, .vinedos-txt{
+    font-family: 'Ledger';
+    text-align: center;
+}
+h1.vinedos-h1{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 52px;
+}
+.nuestros-vinedos{
+    font-size: 25px;
+    margin: 20px 0;
+}
+.vinedos-txt{
+    font-size: 22px;
+    line-height: 50px;
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.vinedo-banner.vinedo-1{
+    background-image: url(../imagenes/vinedo-1-banner.png);
+}
+.vinedo-banner.vinedo-2{
+    background-image: url(../imagenes/vinedo-2-banner.png);
+}
+.vinedo-banner.vinedo-3{
+    background-image: url(../imagenes/vinedo-3-banner.png);
+}
+.vinedo-banner{
+    background-size: cover;
+    min-height: 800px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.vinedo-banner .contenedor{
+    margin: 0;
+    width: auto;
+    padding: 0 230px 100px 0;
+}
+.vinedo-banner h2{
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Lexend Tera';
+    text-transform: uppercase;
+}
+.vinedo-banner p{
+    color: #fff;
+    font-family: 'M PLUS 1 Code';
+    font-size: 25px;
+    padding-left: 15px;
+}
+.datos-vinedo{
+    font-family: 'Ledger';
+    padding: 80px 0;
+}
+.datos-vinedo.alt{
+    background: #502D2D;
+    color: #fff;
+}
+.datos-vinedo p{
+    text-align: center;
+    font-size: 24px;
+    width: 85%;
+    margin: auto;
+}
