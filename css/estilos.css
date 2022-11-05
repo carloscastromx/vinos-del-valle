@@ -92,9 +92,153 @@ header .enlaces-header div.vertical{
 }
 .tarjeta-home .contenido a{
     color: #fff;
-    font-size: 70px;
+    font-size: 50px;
+    text-transform: uppercase;
 }
 
 .tarjeta-home:hover .contenido{
     opacity: 1;
+}
+
+.nuestra-historia{
+    padding: 200px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nuestra-historia .col-texto{
+    width: 40%;
+}
+.nuestra-historia .col-img{
+    width: 60%;
+    position: relative;
+}
+.nuestra-historia .col-img .recuadro{
+    width: 300px;
+    height: 106px;
+    background: #2D1212;
+    border-radius: 0px 21px 56px 0px;
+    position: absolute;
+    bottom: -66px;
+    left: 30px;
+}
+.nuestra-historia .col-texto h2{
+    text-transform: uppercase;
+    color: #450D09;
+    font-family: 'League Spartan';
+    font-weight: 400;
+    font-size: 40px;
+}
+.nuestra-historia .col-texto p{
+    line-height: 1.5;
+    font-size: 25px;
+    font-family: 'Ledger';
+}
+.nuestra-historia .col-texto p:nth-child(2){
+    margin: 20px 0;
+}
+.nuestra-historia .col-img img {
+    max-width: 85%;
+    display: block;
+    margin: auto;
+    border-radius: 22px;
+}
+.ordena-ahora{
+    background: url(../imagenes/fondo-ordene-ahora.png) rgba(100, 33, 18, 0.62);
+    background-blend-mode: multiply;
+    padding-top: 40px;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+}
+.ordena-ahora h2{
+    color: #6D0000;
+    font-size: 64px;
+    font-weight: normal;
+    font-family: 'League Spartan';
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.ordena-ahora p{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Ledger';
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    line-height: 50px;
+}
+.ordena-ahora .botones-ordenar{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 140px;
+    margin-bottom: 400px;
+}
+.ordena-ahora .botones-ordenar a.btn-uber-eats{
+    background: #E9E9E9;
+    border-radius: 35px;
+    padding: 12px 30px;
+    max-width: 340px;
+}
+.ordena-ahora .botones-ordenar a.btn-uber-eats img{
+    width: 95%;
+    display: block;
+    margin: auto;
+}
+.ordena-ahora .botones-ordenar a:not(.btn-uber-eats){
+    background: #FF3232;
+    border-radius: 35px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'League Spartan';
+    font-size: 40px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background: #4F0808;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: #fff;
+    font-family: 'League Spartan';
+}
+footer .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer h3{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+}
+footer .iconos-redes-sociales{
+    margin: 90px 0;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .iconos-redes-sociales a img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+}
+footer .datos-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .datos-footer .correo{
+    text-decoration: underline;
+}
+footer .datos-footer .copyright{
+    width: 370px;
+    text-align: center;
 }
