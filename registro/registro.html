@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinos del Valle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karma&family=League+Spartan&family=Ledger&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/registro/estilosRegistro.css"> 
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="fila">
+                <nav class="menu">
+                    <a href="#">Exclusivos</a>
+                    <a href="#">Vinos</a>
+                    <a href="../index.html">
+                        <!--<h1>Logos</h1>-->
+                        <!--Cambiar img a SVG-->
+                        <!--Haver Transparente-->
+                        <img src="../imagenes/Recurso5.png" alt="LogoIMG" height="42">
+                    </a>
+                    <a href="vinedos/">Viñedos</a>
+                    <a href="login.html">Login</a>
+                </nav>
+                <div class="enlaces-header">
+                    <a href="#">
+                        <img src="../imagenes/icono-lupa.svg" alt="#">
+                    </a>
+                    <div class="vertical"></div>
+                    <a href="#">
+                        <img src="../imagenes/icono-carrito.svg" alt="#">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Contenedor Central-->
+    <div class = "contenedor_central">
+        <h1>Registrarse</h1>
+        <form method="post">
+            
+            <div class="cont_izquierda">
+                <h2>Perfil</h2>
+
+                <!--Alias-->
+                <div class="text_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Alias</label>
+                </div>
+                <!--Nombre-->
+                <div class="text_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Nombre</label>
+                </div>
+                <!--Correo-->
+                <div class="text_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Correo</label>
+                </div>
+                <!--Fecha de nacimiento-->
+                <div class="text_field">
+                    <!-- <label for="Nacimiento">Fecha de naciemiento</label> -->
+                    <!-- <label>dd/mm/aaaa</label> -->
+                    <div class="cumple_field">
+                        <input type="date" id="cumple" name="cumple"required>
+                    </div>
+
+                </div>
+                <!--Contraseña-->
+                <div class="text_field">
+                    <input type="password" required>
+                    <span></span>
+                    <label>Contraseña</label>
+                </div>
+
+                <!--Confirmar contraseña (Despues de las pruebas)-->
+                <!-- <div class="text_field">
+                    <input type="password" required>
+                    <span></span>
+                    <label>Confirmar contraseña</label>
+                </div> -->
+
+            </div>
+            
+            <!--Contenedor derecha-->
+            <div class="cont_derecha">
+                <h2>Direccion</h2>
+                <!--Dirección-->
+                <div class="text_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Calle</label>
+                </div>
+
+                <div class="text_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Departamento</label>
+                </div>
+
+                <div class="text_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Ciudad</label>
+                </div>
+                
+                <div class="text_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Codigo Postal</label>
+                </div>
+            </div>
+
+            <!--Submit Button-->
+            <input type="submit" value="Login">
+            <!--Ya tiene cuenta-->
+            <div class="registrarse_link">
+                ¿Ya tiene una cuenta?
+                <a href = "../login/login.html">Log In</a>
+            </div>
+            
+        </form>
+    </div>
+    
+</body>
+</html>
