@@ -1,0 +1,164 @@
+:root{
+    --crater-brown: #532222;
+}
+
+body{
+    background-color: #EEEDD9;
+}
+
+@import url("https://fonts.googleapis.com/css?family=League+Spartan:400|Libre+Baskerville:400,400italic|Karma:400|Ledger:400|Lexend+Tera:400|M+Plus+1+Code:400");
+
+.populares{
+    align-items: flex-end;
+    display: flex;
+    height: 899px;
+    margin-top: 109px;
+    min-width: 1595px;
+    
+    border: red 3px solid;
+}
+
+.flex-col{
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    min-height: 899px;
+    width: 571px;
+
+    border: blue 3px solid;
+}
+
+.categoria{
+    align-self: flex-start;
+    height: 77px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+    width: 493px;
+
+    font-family: 'League Spartan';
+    font-size: 48px;
+    color: var(--crater-brown);
+
+
+    border: green 3px solid;
+
+}
+
+.prod1{
+    align-items: flex-start;
+    cursor:pointer;
+    display: flex;
+    height: 384px;
+    margin-top: 24px;
+    min-width: 282px;
+}
+
+.overlap-group-container{
+    align-items: flex-end;
+    background-color: var(--crater-brown);
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 384px;
+    padding: 0 12px;
+    width: 276px;
+}
+.image-container{
+    align-self: center;
+    height: 241px;
+    margin-right: 23.1px;
+    margin-top: 13px;
+    position: relative;
+    width: 90px;
+}
+.vinoImg{
+    height: 241px;
+    left:35px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 55px;
+}
+.copaImg{
+    height: 124px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 117px;
+    width: 48px;
+}
+
+.overlap-group{
+    height: 115px;
+    position: relative;
+    width: 232px;
+}
+.overlap-group-1{
+    height: 115;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 232px;
+}
+.favIcon{
+    height: 74px;
+    left: 158px;
+    object-fit: cover;
+    position: absolute;
+    top: 41px;
+    width: 74px;
+}
+.titulo-1{
+    /* ProductoX */
+    height: 33px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0px;
+    width: 146px;
+
+    font-family: 'League Spartan';
+    
+    font-size: 36px;
+    color: #DBCAD3;
+}
+.valgin-text-middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'League Spartan';
+}
+.titulo-2{
+    /* Viñedo de Procedencia */
+    height: 33px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 24px;
+    width: 170px;
+
+    font-family: 'Libre Baskerville';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+    color: #B8B8B8;
+}
+.titulo-3{
+    /* Precio */
+    height: 33px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 63px;
+    width: 146px;
+
+
+    font-family: 'League Spartan';
+    font-size: 36px;
+    color:#DBCAD3;
+}
