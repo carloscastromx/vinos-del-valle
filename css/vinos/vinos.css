@@ -8,6 +8,81 @@ body{
 
 @import url("https://fonts.googleapis.com/css?family=League+Spartan:400|Libre+Baskerville:400,400italic|Karma:400|Ledger:400|Lexend+Tera:400|M+Plus+1+Code:400");
 
+.contenedor{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+header{
+    padding: 20px;
+}
+header .fila{
+    display: flex;
+    justify-content: space-between;
+}
+header nav{
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav a{
+    display: inline-block;
+    font-family: 'Karma';
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+}
+header .enlaces-header{
+    display: flex;
+    align-items: center;
+}
+header .enlaces-header a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+header .enlaces-header a img {
+    width: 100%;
+}
+header .enlaces-header div.vertical{
+    margin: 0 15px;
+    border: 1px solid rgba(0, 0, 0, 0.36);
+    height: 30px;
+}
+
+.inicioVinos{
+
+    text-align: center;
+    /* border:black 3px solid; */
+}
+
+.inicioVinos .tituloVinos{
+    
+
+    font-family: 'Ledger';
+    font-size: 48px;
+
+    /* border: green 3px solid; */
+}
+
+.inicioVinos .subtitleVinos{
+    font-family: 'Ledger';
+    font-size: 16px;
+
+    /* border: red 3px solid; */
+}
+.inicioVinos p{
+    text-align: center;
+    
+
+    font-family: 'Ledger';
+    font-size: 16px;
+
+    /* border: blue 3px solid; */
+}
+
+
 .populares{
     align-items: flex-end;
     display: flex;
