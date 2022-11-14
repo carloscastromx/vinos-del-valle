@@ -144,3 +144,18 @@ input[type="submit"]:hover{
 .registrarse_link a:hover{
     text-decoration: underline;
 }
+p.resultado-txt{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    font-family: 'League Spartan';
+    margin-top: 15px;
+}
+p.error-txt{
+    color: #f00;
+    background: rgba(255,0,0,0.2);
+}
+p.exito-txt{
+    color: #4BB543;
+    background: rgba(75,181,67,0.2);
+}

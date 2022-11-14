@@ -1,3 +1,39 @@
+<?php 
+    session_start();
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $server = "localhost";
+        $user= "u480286810_Raul";
+        $pass_bd = "wEbwo4-robmew-mivnir";
+        $bd = "u480286810_VDV";
+
+        $correo = $_POST['user-mail'];
+        $pass = $_POST['user-pass'];
+
+        $conexion = new mysqli($server,$user,$pass_bd,$bd);
+
+        if ($conexion->connect_error) {
+            die("Error de conexión: " . $conexion->connect_error);
+        } else {
+            
+            //Buscar alias por si ya existe
+            $query = "SELECT * FROM clientes WHERE correo = '$correo' AND contrasena = '$pass'";
+            $res_sql = mysqli_query($conexion,$query);
+            $filas_query = mysqli_num_rows($res_sql);
+
+            if($filas_query > 0){
+                header("Location: https://vinosdelvalle.store/login/index.php?exito=Inicio de sesión exitoso");
+                exit();
+            } else {
+                header("Location: https://vinosdelvalle.store/login/index.php?error=Datos incorrectos");
+                exit();
+            }
+
+            mysqli_free_result($res_sql);
+
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,16 +74,25 @@
     <!--Contenedor Central-->
     <div class = "contenedor_central">
         <h1>Log In</h1>
+        <p class="resultado-txt <?php if(isset($_GET['error'])){
+                echo "error-txt";
+        } else if(isset($_GET['exito'])){
+           echo "exito-txt";
+        } ?>"><?php if(isset($_GET['error'])){
+            echo $_GET['error'];
+        } else if(isset($_GET['exito'])){
+            echo $_GET['exito'];
+        } ?></p>
         <form method="post">
             <!--Email-->
             <div class="text_field">
-                <input type="text" required>
+                <input type="text" name="user-mail" id="user-mail" required>
                 <span></span>
                 <label>Correo</label>
             </div>
             <!--Password-->
             <div class="text_field">
-                <input type="password" required>
+                <input type="password" name="user-pass" id="user-pass" required>
                 <span></span>
                 <label>Contraseña</label>
             </div>
