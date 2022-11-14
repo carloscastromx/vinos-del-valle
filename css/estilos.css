@@ -113,12 +113,13 @@ header .enlaces-header div.vertical{
     width: 60%;
     position: relative;
 }
-.nuestra-historia .col-img .recuadro{
+.nuestra-historia .col-img {
+    display: flexbox;
     width: 300px;
     height: 106px;
     background: #2D1212;
     border-radius: 0px 21px 56px 0px;
-    position: absolute;
+    position: relative;
     bottom: -66px;
     left: 30px;
 }
@@ -133,6 +134,7 @@ header .enlaces-header div.vertical{
     line-height: 1.5;
     font-size: 25px;
     font-family: 'Ledger';
+    text-align: justify;
 }
 .nuestra-historia .col-texto p:nth-child(2){
     margin: 20px 0;
