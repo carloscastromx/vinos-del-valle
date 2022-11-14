@@ -8,6 +8,10 @@ a{
 }
 body{
     background-color: #EEEDD9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 .contenedor{
     width: 90%;
@@ -239,8 +243,8 @@ footer .datos-footer .correo{
     text-decoration: underline;
 }
 footer .datos-footer .copyright{
-    width: 370px;
-    text-align: center;
+    width: 100%;
+    text-align: right;
 }
 h1.vinedos-h1, .nuestros-vinedos, .vinedos-txt{
     font-family: 'Ledger';
