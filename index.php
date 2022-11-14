@@ -39,7 +39,7 @@
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="#">Exclusivos</a>
+                    <a href="exclusivos/">Exclusivos</a>
                     <a href="vinos/">Vinos</a>
                     <a href="#">
                         <img src="imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
@@ -48,7 +48,7 @@
                     <a href="login/">Login</a>
                 </nav>
                 <div class="enlaces-header">
-                    <a href="#">
+                    <a href="busqueda/">
                         <img src="imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
