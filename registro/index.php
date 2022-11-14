@@ -1,3 +1,59 @@
+<?php
+
+    session_start();
+
+    if(isset($_POST['alias'])){
+        $server = "localhost";
+        $user= "u480286810_Raul";
+        $pass_bd = "wEbwo4-robmew-mivnir";
+        $bd = "u480286810_VDV";
+
+        $alias = $_POST['alias'];
+        $nombre = $_POST['nombre'];
+        $mail = $_POST['mail'];
+        $cumple = $_POST['cumple'];
+        $password = $_POST['password'];
+        $direccion = $_POST['dir-calle'] . ", " . $_POST['dir-int'] . ", " . $_POST['dir-ciudad'] . ", " . $_POST['dir-cp'];
+
+        $conexion = new mysqli($server,$user,$pass_bd,$bd);
+
+        if ($conexion->connect_error) {
+            die("Error de conexión: " . $conexion->connect_error);
+        } else {
+            //Buscar alias por si ya existe
+            $query = "SELECT * FROM clientes WHERE alias = '$alias'";
+            $res_sql = mysqli_query($conexion,$query);
+            $filas_query = mysqli_num_rows($res_sql);
+
+            mysqli_free_result($res_sql);
+
+            if($filas_query >= 1){
+                header("Location: https://vinosdelvalle.store/registro/index.php?error=El alias ya existe");
+                exit();
+            }
+
+            //Insert en clientes
+            $query = "INSERT INTO clientes(alias, nombre_cliente, contrasena, correo, cumpleanos, direccion)
+            VALUES('$alias', '$nombre', '$password', '$mail', '$cumple', '$direccion')";
+
+            $res_sql = mysqli_query($conexion,$query);
+
+            if($res_sql == true){
+                $_SESSION["login"] = '1';
+                header("Location: https://vinosdelvalle.store/registro/index.php?error=Haz sido registrado y loggeado");
+            } else {
+                header("Location: https://vinosdelvalle.store/registro/index.php?exito=Error al registrar usuario");
+                exit();
+            }
+
+            mysqli_free_result($res_sql);
+
+            mysqli_close($conexion);
+        }
+
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,26 +95,35 @@
     <!--Contenedor Central-->
     <div class = "contenedor_central">
         <h1>Registrarse</h1>
-        <form method="post">
+        <p class="resultado-txt <?php if(isset($_GET['error'])){
+                echo "error-txt";
+        } else if(isset($_GET['exito'])){
+           echo "exito-txt";
+        } ?>"><?php if(isset($_GET['error'])){
+            echo $_GET['error'];
+        } else if(isset($_GET['exito'])){
+            echo $_GET['exito'];
+        } ?></p>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             
             <div class="cont_izquierda">
                 <h2>Perfil</h2>
 
                 <!--Alias-->
                 <div class="text_field">
-                    <input type="text" required>
+                    <input type="text" id="alias" name="alias" required>
                     <span></span>
                     <label>Alias</label>
                 </div>
                 <!--Nombre-->
                 <div class="text_field">
-                    <input type="text" required>
+                    <input type="text" id="nombre" name="nombre" required>
                     <span></span>
-                    <label>Nombre</label>
+                    <label>Nombre Completo</label>
                 </div>
                 <!--Correo-->
                 <div class="text_field">
-                    <input type="text" required>
+                    <input type="text" id="mail" name="mail" required>
                     <span></span>
                     <label>Correo</label>
                 </div>
@@ -73,7 +138,7 @@
                 </div>
                 <!--Contraseña-->
                 <div class="text_field">
-                    <input type="password" required>
+                    <input type="password" id="password" name="password" required>
                     <span></span>
                     <label>Contraseña</label>
                 </div>
@@ -92,32 +157,32 @@
                 <h2>Direccion</h2>
                 <!--Dirección-->
                 <div class="text_field">
-                    <input type="text" required>
+                    <input type="text" id="dir-calle" name="dir-calle" required>
                     <span></span>
-                    <label>Calle</label>
+                    <label>Calle y número</label>
                 </div>
 
                 <div class="text_field">
-                    <input type="text" required>
+                    <input type="text" id="dir-int" name="dir-int" required>
                     <span></span>
-                    <label>Departamento</label>
+                    <label>Nº Interior</label>
                 </div>
 
                 <div class="text_field">
-                    <input type="text" required>
+                    <input type="text" id="dir-ciudad" name="dir-ciudad" required>
                     <span></span>
                     <label>Ciudad</label>
                 </div>
                 
                 <div class="text_field">
-                    <input type="text" required>
+                    <input type="text" id="dir-cp" name="dir-cp" required>
                     <span></span>
                     <label>Codigo Postal</label>
                 </div>
             </div>
 
             <!--Submit Button-->
-            <input type="submit" value="Login">
+            <input type="submit" value="Login"></button>
             <!--Ya tiene cuenta-->
             <div class="registrarse_link">
                 ¿Ya tiene una cuenta?

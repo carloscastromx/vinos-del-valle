@@ -10,8 +10,8 @@
         die("Error de conexión: " . $conexion->connect_error);
     } else {
         
-        $consulta = "SELECT id_vinos, vinos.nombre as nom_vino, vinedo.nombre as nom_vinedo, precio, imagen From vinos INNER JOIN vinedo on vinedo.id_vinedo = vinos.id_vinedo ORDER BY precio DESC LIMIT 8";
-        $res_sql = mysqli_query($conexion,$consulta);
+        $query = "SELECT id_vinos, vinos.nombre as nom_vino, vinedo.nombre as nom_vinedo, precio, imagen From vinos INNER JOIN vinedo on vinedo.id_vinedo = vinos.id_vinedo ORDER BY precio DESC LIMIT 8";
+        $res_sql = mysqli_query($conexion,$query);
 
         $productos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
 
@@ -84,7 +84,7 @@
                 <div class="prod1">
                     <div class="overlap-group-container">
                         <div class="image-container">
-                            <img class="vinoImg" src="https://vinosdelvalle.store/imagenes/vinos/<?php echo $vino['imagen']; ?>" alt="image 3"/>
+                            <img class="vinoImg" src="https://vinosdelvalle.store/imagenes/vinos/<?php echo ucfirst(strtolower($vino['imagen'])) ; ?>" alt="image 3"/>
                         </div>
                         <div class="overlap-group">
                             <div class="overlap-group-1">
