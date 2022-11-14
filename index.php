@@ -3,6 +3,23 @@
     $user= "u480286810_Raul";
     $pass_bd = "wEbwo4-robmew-mivnir";
     $bd = "u480286810_VDV";
+
+    $conexion = new mysqli($server,$user,$pass_bd,$bd);
+
+    if ($conexion->connect_error) {
+        die("Error de conexión: " . $conexion->connect_error);
+    } else {
+        
+        $consulta = "SELECT id_vinos, vinos.nombre as nom_vino, vinedo.nombre as nom_vinedo, precio, imagen From vinos INNER JOIN vinedo on vinedo.id_vinedo = vinos.id_vinedo ORDER BY precio DESC LIMIT 8";
+        $res_sql = mysqli_query($conexion,$consulta);
+
+        $productos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
+
+        mysqli_free_result($res_sql);
+
+        mysqli_close($conexion);
+        
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es-mx">
@@ -15,6 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karma&family=League+Spartan&family=Ledger&family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css"> 
+    <link rel="stylesheet" href="css/vinos/vinos.css">
 </head>
 <body>
     <header>
@@ -22,7 +40,7 @@
             <div class="fila">
                 <nav class="menu">
                     <a href="#">Exclusivos</a>
-                    <a href="#">Vinos</a>
+                    <a href="vinos/">Vinos</a>
                     <a href="#">
                         <img src="imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
@@ -62,42 +80,23 @@
         <div class="vinos-populares">
             <h2>Populares</h2>
             <div class="vinos-cont">
-                <div class="vino-caja">
-                    <img src="imagenes/vino-producto.png" alt="">
-                    <a href="#">
-                        <h3>Vino 1</h3>
-                    </a>
-                    <p>Viñedo de procedencia</p>
-                    <p>$150.59</p>
-                    <img src="imagenes/icon-heart.png" alt="">
+            <?php foreach($productos as $vino){ ?>
+                <div class="prod1">
+                    <div class="overlap-group-container">
+                        <div class="image-container">
+                            <img class="vinoImg" src="https://vinosdelvalle.store/imagenes/vinos/<?php echo $vino['imagen']; ?>" alt="image 3"/>
+                        </div>
+                        <div class="overlap-group">
+                            <div class="overlap-group-1">
+                                <div class="titulo-1 valgin-text-middle leaguespartan-normal-almond-36px"><?php echo $vino['nom_vino']; ?></div>
+                                <div class="titulo-2 valgin-text-middle librebaskerville-normal-pink-swan-16px"><?php echo $vino['nom_vinedo']; ?></div>
+                                <img class="favIcon" src="https://vinosdelvalle.store/imagenes/favIcon.png" alt="image 5"/>
+                            </div>
+                            <div class="titulo-3">$<?php echo number_format((float)$vino['precio'],0,".",","); ?></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="vino-caja">
-                    <img src="imagenes/vino-producto.png" alt="">
-                    <a href="#">
-                        <h3>Vino 2</h3>
-                    </a>
-                    <p>Viñedo de procedencia</p>
-                    <p>$150.59</p>
-                    <img src="imagenes/icon-heart.png" alt="">
-                </div>
-                <div class="vino-caja">
-                    <img src="imagenes/vino-producto.png" alt="">
-                    <a href="#">
-                        <h3>Vino 3</h3>
-                    </a>
-                    <p>Viñedo de procedencia</p>
-                    <p>$150.59</p>
-                    <img src="imagenes/icon-heart.png" alt="">
-                </div>
-                <div class="vino-caja">
-                    <img src="imagenes/vino-producto.png" alt="">
-                    <a href="#">
-                        <h3>Vino 4</h3>
-                    </a>
-                    <p>Viñedo de procedencia</p>
-                    <p>$150.59</p>
-                    <img src="imagenes/icon-heart.png" alt="">
-                </div>
+            <?php } ?>
             </div>
         </div>
         <div class="nuestra-historia">

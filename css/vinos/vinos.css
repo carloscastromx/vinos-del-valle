@@ -79,28 +79,6 @@ header .enlaces-header div.vertical{
     font-family: 'Ledger';
     font-size: 16px;
 
-    /* border: blue 3px solid; */
-}
-
-
-.populares{
-    align-items: flex-end;
-    display: flex;
-    height: 899px;
-    margin-top: 109px;
-    min-width: 1595px;
-    
-    border: red 3px solid;
-}
-
-.flex-col{
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-    min-height: 899px;
-    width: 571px;
-
-    border: blue 3px solid;
 }
 
 .categoria{
@@ -115,9 +93,21 @@ header .enlaces-header div.vertical{
     font-size: 48px;
     color: var(--crater-brown);
 
+}
 
-    border: green 3px solid;
+.vinos-populares h2{
+    font-family: 'League Spartan';
+    margin-top: 40px;
+    font-size: 38px;
+    color: #532222;
+}
 
+.vinos-cont{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: auto;
 }
 
 .prod1{
@@ -126,7 +116,7 @@ header .enlaces-header div.vertical{
     display: flex;
     height: 384px;
     margin-top: 24px;
-    min-width: 282px;
+    width: 24%;
 }
 
 .overlap-group-container{
@@ -205,6 +195,7 @@ header .enlaces-header div.vertical{
     flex-direction: column;
     justify-content: center;
     font-family: 'League Spartan';
+    font-size: 19px;
 }
 .titulo-2{
     /* Viñedo de Procedencia */
@@ -213,7 +204,7 @@ header .enlaces-header div.vertical{
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 24px;
+    top: 30px;
     width: 170px;
 
     font-family: 'Libre Baskerville';
