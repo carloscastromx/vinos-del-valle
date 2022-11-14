@@ -5,8 +5,17 @@
 body{
     background-color: #EEEDD9;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-@import url("https://fonts.googleapis.com/css?family=League+Spartan:400|Libre+Baskerville:400,400italic|Karma:400|Ledger:400|Lexend+Tera:400|M+Plus+1+Code:400");
+a{
+    text-decoration: none;
+}
+
+@import url("https://fonts.googleapis.com/css?family=League+Spartan:400,200,100|Libre+Baskerville:400,400italic|Karma:400|Ledger:400|Lexend+Tera:400|M+Plus+1+Code:400|Playfair+Display:ital@1&display=swap");
 
 .contenedor{
     width: 90%;
@@ -58,26 +67,32 @@ header .enlaces-header div.vertical{
 }
 
 .inicioVinos .tituloVinos{
+    margin-top: 5%;
     
 
     font-family: 'Ledger';
-    font-size: 48px;
+    font-size: 70px;
 
     /* border: green 3px solid; */
 }
 
 .inicioVinos .subtitleVinos{
-    font-family: 'Ledger';
-    font-size: 16px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
 
     /* border: red 3px solid; */
 }
 .inicioVinos p{
     text-align: center;
     
-
+    margin-left: 25%;
+    width: 50%;
     font-family: 'Ledger';
-    font-size: 16px;
+    font-size: 26px;
 
     /* border: blue 3px solid; */
 }
