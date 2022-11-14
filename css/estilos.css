@@ -298,6 +298,24 @@ h1.vinedos-h1{
     font-family: 'Lexend Tera';
     text-transform: uppercase;
 }
+
+.vinedo-banner.vinedo-3 .contenedor-3 a{
+    font-family: 'Lexend Tera';
+    text-transform: uppercase;
+    padding: 0 0 100px 130px;
+    color: #06f552;
+  
+
+}
+
+.vinedo-banner.vinedo-3 .contenedor p{
+    color: #fff;
+    font-family: 'M PLUS 1 Code';
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+
 .vinedo-banner p{
     color: #fff;
     font-family: 'M PLUS 1 Code';
