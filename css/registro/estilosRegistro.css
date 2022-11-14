@@ -148,7 +148,9 @@ form .text_field{
     height: 2px;
     background: rgb(97, 8, 8);
     transition: .5s;
+   
 }
+
 .text_field input:focus ~ label,
 .text_field input:valid ~ label{
     top: -5px;
@@ -169,8 +171,23 @@ input[type="submit"]{
     cursor: pointer;
     outline: none;
 }
-input[type="submit"]:hover{
-    background: rgb(240, 3, 34);
+input[type="date"]:invalid::-webkit-datetime-edit{
+    
+  
+    content: '';
+    color: #000;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transition: .5s;
+    
+    
+}
+
+[type="submit"]:hover{
+    background: rgb(1, 1, 1)gb(240, 3, 34);
     transition: .5s;
 }
 .registrarse_link{
