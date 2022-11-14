@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: #1A0701;
+    background-color: #0D0401;
 }
 *{
     margin: 0;
@@ -89,5 +89,50 @@ header .enlaces-header div.vertical{
     margin-left: 25%;
     width: 50%;
     font-family: 'Ledger';
-    font-size: 26px;;
+    font-size: 26px;
+}
+
+.imagenExclusivo img{
+    
+    width: 100%;
+    padding-top: 5%;
+
+}
+
+.section2{
+    width:100%;
+    /* background-color: red; */
+    height: 25rem;
+}
+
+.section2 p{
+    align-items: center;
+    text-align: center;
+    
+    
+    font-size: 20px;
+    color: #FFCE84;
+    
+}
+
+.tituloExclusivo h1{
+
+    padding-top: 5%;
+    color: #FFCE84;
+    text-align: center;
+
+    margin-left: 25%;
+    width: 50%;
+    font-family: 'Ledger';
+    font-size: 45px;
+}
+
+.tituloExclusivo h2{
+    color: #FFCE84;
+    text-align: center;
+
+    margin-left: 25%;
+    width: 50%;
+    font-family: 'Ledger';
+    font-size: 45px;
 }
