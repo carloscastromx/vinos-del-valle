@@ -17,6 +17,19 @@ body{
 header{
     padding: 20px;
 }
+
+header .icono-user{
+
+    justify-content: center;
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
+}
 header .fila{
     display: flex;
     justify-content: space-between;

@@ -184,9 +184,20 @@ a.boton-pago {
 .producto-carrito .producto-div .imagen-producto {
     margin-right: 35px;
 }
+header .icono-user{
 
+    justify-content: center;
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
+}
 footer{
-    border: green 3px solid;
+    
 
     transform: translateY(50%);
     

@@ -52,7 +52,18 @@ header .enlaces-header div.vertical{
     border: 1px solid rgba(0, 0, 0, 0.36);
     height: 30px;
 }
+header .icono-user{
 
+    justify-content: center;
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
+}
 .cont-Producto{
 
     /* display: flex;

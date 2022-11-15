@@ -143,12 +143,14 @@ header .enlaces-header div.vertical{
 }
 
 footer{
-    background: #4F0808;
+    
+    background:  #1c09002f;
     padding-top: 20px;
     padding-bottom: 15px;
     color: #fff;
     font-family: 'League Spartan';
 }
+
 footer .contenedor{
     display: flex;
     flex-direction: column;
@@ -182,4 +184,17 @@ footer .datos-footer .correo{
 footer .datos-footer .copyright{
     width: 100%;
     text-align: right;
+}
+
+header .icono-user{
+
+    justify-content: center;
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
 }

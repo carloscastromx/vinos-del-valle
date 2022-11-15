@@ -43,15 +43,22 @@ header .enlaces-header a{
     color: #000;
     font-size: 20px;
 
+    
 }
+
+
 header .enlaces-header a img {
     width: 100%;
 }
 header .enlaces-header div.vertical{
     margin: 0 15px;
-    border: 1px solid rgba(0, 0, 0, 0.36);
+    border: 10px solid rgba(0, 0, 0, 0.36);
     height: 30px;
 }
+
+
+
+
 header .enlaces-header div.LoginText{
     margin: 0 15px;
     
@@ -66,6 +73,19 @@ header .Busqueda {
     border-radius: 0.5rem;
     justify-content: center;
     width: 100%;
+}
+header .icono-user{
+
+    justify-content: flex-end;
+    
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
 }
 
 .Busqueda input{

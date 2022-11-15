@@ -36,8 +36,16 @@ header nav a{
 }
 
 header .icono-user{
-    background-color: #520303;
+
+    justify-content: center;
     display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
 }
 
 header .enlaces-header{
