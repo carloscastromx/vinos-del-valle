@@ -68,7 +68,7 @@ header .enlaces-header div.vertical{
 
     padding-top: 45px;
     height: 35%;
-    border: green 3px solid;
+    /* border: green 3px solid; */
 
 }
 .circulo{
@@ -106,8 +106,8 @@ header .enlaces-header div.vertical{
 }
 .encabezados p{
 
-    padding-left: 125px;
-    padding-right: 125px;
+    padding-left: 110px;
+    padding-right: 110px;
 
     /* border: green 3px solid; */
 }
@@ -115,17 +115,19 @@ header .enlaces-header div.vertical{
 .datos{
     display: flex;
     justify-content: center;
-    /* border: green 3px solid; */
-}
-
-.datos p, a{
-    padding-left: 100px;
-    padding-right: 100px;
-
+    font-family: 'Ledger';
     
-
     /* border: green 3px solid; */
 }
+
+.datos p, .datos a{
+   
+   padding-left: 100px;
+   padding-right: 100px;
+   /* border: green 3px solid; */
+}
+
+
 .datos a{
     padding-top: 1%;
 }
@@ -137,9 +139,14 @@ header .enlaces-header div.vertical{
 
 p{
     display: block;
-    
+    font-family: 'Ledger';
+
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+.nombre{
+    padding-bottom: 5%;
+    font-family: 'Ledger';
 }
