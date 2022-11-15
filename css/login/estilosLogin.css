@@ -34,6 +34,12 @@ header nav a{
     text-transform: uppercase;
     color: #000;
 }
+
+header .icono-user{
+    background-color: #520303;
+    display: flex;
+}
+
 header .enlaces-header{
     display: flex;
     align-items: center;
