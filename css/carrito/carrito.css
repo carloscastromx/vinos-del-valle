@@ -186,6 +186,10 @@ a.boton-pago {
 }
 
 footer{
+    border: green 3px solid;
+
+    transform: translateY(50%);
+    
     background: #4F0808;
     margin-top: auto;
     margin-bottom: auto;

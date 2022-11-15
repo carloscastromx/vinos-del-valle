@@ -9,10 +9,23 @@ a{
 body{
     background-color: #EEEDD9;
 }
+
 .contenedor{
     width: 90%;
     max-width: 1400px;
     margin: auto;
+    
+}
+
+.vinedo-banner .vinedo-3 .contenedor a{
+    color: red;
+}
+
+.contenedorMon a{
+    color: #ffffff;
+    margin: 0;
+    width: auto;
+    padding: 0 230px 100px 0;
 }
 header{
     padding: 20px;

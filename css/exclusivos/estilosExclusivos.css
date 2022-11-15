@@ -23,6 +23,7 @@ a{
     margin: auto;
 }
 header{
+   
     padding: 20px;
 }
 header .fila{
@@ -40,11 +41,14 @@ header nav a{
     font-family: 'Karma';
     font-size: 20px;
     text-transform: uppercase;
+    border-radius: 2rem;
     color: #FF9900;
 }
 header .enlaces-header{
     display: flex;
     align-items: center;
+    border-radius: 0.5rem;
+    background-color: #FF9900;
 }
 header .enlaces-header a{
     display: inline-block;
@@ -61,6 +65,7 @@ header .enlaces-header div.vertical{
 }
 
 .menu a img{
+    border-radius: 0.5rem;
     border: #FF9900 1px solid;
     background-color: #FF9900;
 }
