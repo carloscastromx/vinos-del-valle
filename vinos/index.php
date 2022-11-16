@@ -73,24 +73,23 @@
                             <div class="titulo-2 valgin-text-middle librebaskerville-normal-pink-swan-16px">Viñedo de Procedencia</div>
                             <img class="favIcon" src="imagenesVinos/favIcon.png" alt="image 5"/>
                         </div>
-                        <div class="titulo-3">$150.59</div>
                     </div>
                 </div>
-            </div>
-
-            <div class="prod1">
-                <div class="overlap-group-container">
-                    <div class="image-container">
-                        <img class="vinoImg" src="imagenesVinos/vinoImg.png" alt="image 3"/>
-                        <img class="copaImg" src="imagenesVinos/copaImg.png" alt="imgae 4"/>
-                    </div>
-                    <div class="overlap-group">
-                        <div class="overlap-group-1">
-                            <div class="titulo-1 valgin-text-middle leaguespartan-normal-almond-36px">Producto1</div>
-                            <div class="titulo-2 valgin-text-middle librebaskerville-normal-pink-swan-16px">Viñedo de Procedencia</div>
-                            <img class="favIcon" src="imagenesVinos/favIcon.png" alt="image 5"/>
+    
+                <div class="prod1">
+                    <div class="overlap-group-container">
+                        <div class="image-container">
+                            <img class="vinoImg" src="imagenesVinos/vinoImg.png" alt="image 3"/>
+                            <img class="copaImg" src="imagenesVinos/copaImg.png" alt="imgae 4"/>
                         </div>
-                        <div class="titulo-3">$150.59</div>
+                        <div class="overlap-group">
+                            <div class="overlap-group-1">
+                                <div class="titulo-1 valgin-text-middle leaguespartan-normal-almond-36px">Producto1</div>
+                                <div class="titulo-2 valgin-text-middle librebaskerville-normal-pink-swan-16px">Viñedo de Procedencia</div>
+                                <img class="favIcon" src="imagenesVinos/favIcon.png" alt="image 5"/>
+                            </div>
+                            <div class="titulo-3">$150.59</div>
+                        </div>
                     </div>
                 </div>
             </div>

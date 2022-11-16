@@ -8,6 +8,10 @@ a{
 }
 body{
     background-color: #EEEDD9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .contenedor{
