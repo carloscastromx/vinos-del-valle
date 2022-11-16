@@ -1,0 +1,9 @@
+1. Extensiones cambiadas a PHP
+2. Pagina de User.php, 
+    - Conexion con Base de datos
+    - La tabla de Historial de Pedidos debe mostrar los pedidos que ha realizado un usuario
+    -El monto que aparece es el monto total del pedido (La suma de cada producto comprado en el pedido)
+3. Pagina detallePedidos.php,
+    -Conexion con Base de datos
+    -"Ver detalle" (En la pagina User.php) debe llevar a los Detalles del pedido realizado
+    -El detalle del pedido debe mostrar los pedidos, precio por producto y el Monto total del pedido
