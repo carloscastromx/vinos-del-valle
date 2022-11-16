@@ -1,3 +1,0 @@
-1.IMG Logo añadidas a carpeta imagenes
-2.Carpeta Login, index añadidas
-3. 

@@ -34,6 +34,20 @@ header nav a{
     text-transform: uppercase;
     color: #000;
 }
+
+header .icono-user{
+
+    justify-content: center;
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
+}
+
 header .enlaces-header{
     display: flex;
     align-items: center;
@@ -144,6 +158,7 @@ input[type="submit"]:hover{
 .registrarse_link a:hover{
     text-decoration: underline;
 }
+
 p.resultado-txt{
     text-align: center;
     margin: 5px;

@@ -8,27 +8,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karma&family=League+Spartan&family=Ledger&family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilos.css"> 
+    <link rel="stylesheet" href="../css/carrito/carrito.css"> 
 </head>
 <body>
     <header>
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="../exclusivos/">Exclusivos</a>
-                    <a href="../vinos/">Vinos</a>
+                    <a href="../Exclusivo/index.html">Exclusivos</a>
+                    <a href="../vinos/index.html">Vinos</a>
                     <a href="../">
                         <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="../vinedos/">Viñedos</a>
-                    <a href="../login/">Login</a>
+                    <a href="../vinedos/index.html">Viñedos</a>
+
+                    <div class="icono-user">
+                         <a href="../login/index.html"> 
+                         <img src="../imagenes/icono-user.svg " alt="#">
+
+                    </a>
+                    </div>
+                   
                 </nav>
+                
                 <div class="enlaces-header">
-                    <a href="../busqueda">
+                    <a href="../Lupa/index.html">
                         <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="../carrito/">
+                    <a href="../carrito/index.html">
                         <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>
@@ -78,7 +86,38 @@
                     <p class="precio">$150.59</p>
                 </div>
             </div>
-        
+
+            <section class="section_Pago">
+                <div class="titulo_Pago">
+                    <h1>Tarjeta de Credito</h1>
+                </div>
+                
+                <div class="cont_Pago">
+                    <!-- Titular -->
+                    <div class="titular_Tarjeta">
+                        <label for="name" >Titular de Tarjeta: </label>
+                        <input class="redondo" type="text" minlength="1" maxlength="45" placeholder="Daniel Ayala Domínguez">  
+                    </div>
+                        <!-- Numero de Tarjeta -->
+                    <div class="num_Tarjeta">
+                        <label for="name" >No. Tarjeta: </label>
+                        <input class="redondo" type="text" minlength="16" maxlength="16" placeholder="XXXX XXXX XXXX XXXX">  
+                    </div>
+                    <!-- CVV -->
+                    <div class="cvv_Tarjeta">
+                        <label for="tarjeta" >CVV: </label>
+                        <input class="redondo" type="text" minlength="3" maxlength="3" placeholder="XXX">  
+                    </div>
+                    <!-- Fecha Expiracion -->
+                    <div class="fecha_Tarjeta">
+                        <label for="tarjeta" >Fecha de Expiracion: </label>
+                        <input class="redondo" type="month" minlength="4" maxlength="4" placeholder="xx/xx">  
+                    </div>
+                </div>
+
+
+            </section>
+
             <div class="btn-carrito-row">
                 <a href="#" class="boton-pago">Comprar</a>
             </div>        
@@ -88,13 +127,13 @@
         <div class="contenedor">
             <h3>Contáctenos</h3>
             <div class="iconos-redes-sociales">
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=100087619160116">
                     <img src="../imagenes/icon-facebook.png" alt="">
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/vinosdelvalle2022">
                     <img src="../imagenes/icon-instagram.png" alt="">
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/vdelvalle2022">
                     <img src="../imagenes/icon-twitter.png" alt="">
                 </a>
             </div>

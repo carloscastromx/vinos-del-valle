@@ -51,20 +51,28 @@
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="../exclusivos">Exclusivos</a>
-                    <a href="../vinos/">Vinos</a>
+                    <a href="../Exclusivo/index.html">Exclusivos</a>
+                    <a href="../vinos/index.html">Vinos</a>
                     <a href="../">
                         <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="../vinedos/">Viñedos</a>
-                    <a href="#">Login</a>
+                    <a href="../vinedos/index.html">Viñedos</a>
+
+                    <div class="icono-user">
+                         <a href="../login/index.html"> 
+                         <img src="../imagenes/icono-user.svg " alt="#">
+
+                    </a>
+                    </div>
+                   
                 </nav>
+                
                 <div class="enlaces-header">
-                    <a href="../busqueda">
+                    <a href="../Lupa/index.html">
                         <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="../carrito/">
+                    <a href="../carrito/index.html">
                         <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>

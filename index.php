@@ -39,21 +39,29 @@
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="exclusivos/">Exclusivos</a>
-                    <a href="vinos/">Vinos</a>
-                    <a href="#">
-                        <img src="imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
+                    <a href="../Exclusivo/index.html">Exclusivos</a>
+                    <a href="../vinos/index.html">Vinos</a>
+                    <a href="../">
+                        <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="vinedos/">Viñedos</a>
-                    <a href="login/">Login</a>
+                    <a href="../vinedos/index.html">Viñedos</a>
+
+                    <div class="icono-user">
+                         <a href="../login/index.html"> 
+                         <img src="../imagenes/icono-user.svg " alt="#">
+
+                    </a>
+                    </div>
+                   
                 </nav>
+                
                 <div class="enlaces-header">
-                    <a href="busqueda/">
-                        <img src="imagenes/icono-lupa.svg" alt="#">
+                    <a href="../Lupa/index.html">
+                        <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="carrito/">
-                        <img src="imagenes/icono-carrito.svg" alt="#">
+                    <a href="../carrito/index.html">
+                        <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>
             </div>
@@ -61,20 +69,26 @@
     </header>
     <section class="contenedor">
         <div class="tarjetas-home">
+            <a id="link" href="vinedos/index.html">
             <div class="tarjeta-home vinedos">
                 <div class="contenido">
-                    <a href="vinedos/">Viñedos</a>
+                 <h3>Viñedos</h3>
                 </div>
+            </a>
             </div>
+            <a id="link" href="vinos/index.html">
             <div class="tarjeta-home vinos">
                 <div class="contenido">
-                    <a href="#">Vinos</a>
+                    <h3>Vinos</h3>
                 </div>
+            </a>
             </div>
+            <a id="link" href="Exclusivo/index.html">
             <div class="tarjeta-home exclusivos">
                 <div class="contenido">
-                    <a href="#">Exclusivos</a>
+                    <h3>Viñedos</h3>
                 </div>
+            </a>
             </div>
         </div>
         <div class="vinos-populares">
@@ -102,8 +116,8 @@
         <div class="nuestra-historia">
             <div class="col-texto">
                 <h2>Nuestra Historia</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget iaculis metus, ut maximus libero. Aliquam sed quam nec mi pretium ullamcorper a luctus leo.</p>
-                <p>Aliquam sed quam nec mi pretium ullamcorper a luctus leo. </p>
+                <p>La historia de Vinos Del Valle se remonta al año 1974 con la pasión de Juan B. Morales Doria y a la visión y emprendedurismo de Juan B. Morales Gonzalez, </p>
+                <p>quien gracias a ellos se cristaliza la idea de hacer los mejores vinos de la región de Norte America</p>
             </div>
             <div class="col-img">
                 <img src="imagenes/img-nuestra-historia.png" alt="">
@@ -114,10 +128,10 @@
     <section class="ordena-ahora">
         <div class="contenedor">
             <h2>Ordene Ahora</h2>
-            <p>Fusce eu odio sit amet ligula laoreet faucibus. Maecenas non venenatis ipsum. Phasellus elementum scelerisque ultrices. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada </p>
+            <p> </p>
             <div class="botones-ordenar">
-                <a href="#">Online</a>
-                <a href="#" class="btn-uber-eats">
+                <a href="vinos/index.html">Online</a>
+                <a href="https://u.cornershopapp.com/store/98/search/Vinos" class="btn-uber-eats">
                     <img src="imagenes/UberText.png" alt="">
                 </a>
             </div>
@@ -128,14 +142,25 @@
         <div class="contenedor">
             <h3>Contáctenos</h3>
             <div class="iconos-redes-sociales">
-                <a href="#">
+<!-- <<<<<<< rogelio -->
+                <a href="https://www.facebook.com/profile.php?id=100087619160116">
                     <img src="imagenes/icon-facebook.png" alt="">
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/vinosdelvalle2022">
                     <img src="imagenes/icon-instagram.png" alt="">
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/vdelvalle2022">
                     <img src="imagenes/icon-twitter.png" alt="">
+<!-- ======= -->
+                <a href="#">
+                    <img src="../imagenes/icon-facebook.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../imagenes/icon-instagram.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../imagenes/icon-twitter.png" alt="">
+<!-- >>>>>>> daniel -->
                 </a>
             </div>
             <div class="datos-footer">
