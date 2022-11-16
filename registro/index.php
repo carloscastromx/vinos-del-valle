@@ -40,6 +40,7 @@
 
             if($res_sql == true){
                 $_SESSION["login"] = '1';
+                $_SESSION["correo-usuario"] = $mail;
                 header("Location: https://vinosdelvalle.store/registro/index.php?error=Haz sido registrado y loggeado");
             } else {
                 header("Location: https://vinosdelvalle.store/registro/index.php?exito=Error al registrar usuario");
