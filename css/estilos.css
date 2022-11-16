@@ -9,11 +9,66 @@ a{
 body{
     background-color: #EEEDD9;
 }
+
 .contenedor{
     width: 90%;
     max-width: 1400px;
     margin: auto;
+    
 }
+header .icono-user{
+
+    justify-content: center;
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
+}
+
+.vinedo-banner .vinedo-3 .contenedor a{
+    color: red;
+}
+
+.contenedorMon a{
+    color: #ebbb38;
+    margin: 0;
+    width: auto;
+    padding: 0 230px 100px 0;
+}
+
+.contenedorMon a:hover{
+    color: #c0662a;
+   
+
+}
+
+
+.contenedorSanRafa a{
+    color: #d5b036;
+    margin: 0;
+    width: auto;
+    padding: 0 230px 100px 0;
+}
+
+.contenedorSanRafa a:hover{
+    color: #d3ff32;
+}
+
+.contenedorLince a{
+    color: #818f30;
+    margin: 0;
+    width: auto;
+    padding: 0 230px 100px 0;
+}
+
+.contenedorLince a:hover{
+    color: bisque;
+}
+
 header{
     padding: 20px;
 }
@@ -90,16 +145,15 @@ header .enlaces-header div.vertical{
     font-family: 'Ledger';
     border-radius: 22px;
 }
-.tarjeta-home .contenido a{
+.tarjeta-home .contenido a, .tarjeta-home h3{
     color: #fff;
-    font-size: 50px;
+    font-size: 30px;
     text-transform: uppercase;
 }
 
 .tarjeta-home:hover .contenido{
     opacity: 1;
 }
-
 .nuestra-historia{
     padding: 200px 0;
     display: flex;
@@ -266,6 +320,8 @@ h1.vinedos-h1{
 }
 .vinedo-banner.vinedo-1{
     background-image: url(../imagenes/vinedo-1-banner.png);
+    
+   
 }
 .vinedo-banner.vinedo-2{
     background-image: url(../imagenes/vinedo-2-banner.png);
@@ -273,6 +329,7 @@ h1.vinedos-h1{
 .vinedo-banner.vinedo-3{
     background-image: url(../imagenes/vinedo-3-banner.png);
 }
+
 .vinedo-banner{
     background-size: cover;
     min-height: 800px;
