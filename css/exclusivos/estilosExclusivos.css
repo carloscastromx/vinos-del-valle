@@ -143,14 +143,21 @@ header .enlaces-header div.vertical{
 }
 
 footer{
+/* <<<<<<< rogelio
     
     background:  #1c09002f;
+/*=======*/
+    background: #4F0808;
+/*>>>>>>> daniel*/
     padding-top: 20px;
     padding-bottom: 15px;
     color: #fff;
     font-family: 'League Spartan';
 }
+/*<<<<<<< rogelio*/
 
+/*=======*/
+/* >>>>>>> daniel */
 footer .contenedor{
     display: flex;
     flex-direction: column;
@@ -184,6 +191,7 @@ footer .datos-footer .correo{
 footer .datos-footer .copyright{
     width: 100%;
     text-align: right;
+/*<<<<<<< rogelio*/
 }
 
 header .icono-user{
@@ -198,3 +206,5 @@ header .icono-user{
     width: 5vw;
 
 }
+/* ======= */
+/* >>>>>>> daniel*/
