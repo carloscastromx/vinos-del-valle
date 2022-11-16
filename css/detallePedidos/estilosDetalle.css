@@ -118,7 +118,7 @@ header .enlaces-header div.vertical{
 .encabezados_Pedidos p{
     font-family: 'Ledger';
 
-    border: red 3px solid;
+    /* border: red 3px solid; */
 }
 
 /* Contenedor de Datos */
