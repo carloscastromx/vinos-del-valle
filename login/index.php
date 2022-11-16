@@ -22,6 +22,7 @@
             $filas_query = mysqli_num_rows($res_sql);
 
             if($filas_query > 0){
+                $_SESSION["correo-usuario"] = $correo;
                 header("Location: https://vinosdelvalle.store/login/index.php?exito=Inicio de sesión exitoso");
                 exit();
             } else {
