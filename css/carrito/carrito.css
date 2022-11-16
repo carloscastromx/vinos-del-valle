@@ -85,7 +85,36 @@ header .enlaces-header div.vertical{
     display: flex;
     justify-content: flex-end;
     font-family: 'League Spartan';
+    /* border: red 3px solid; */
 }
+
+/* Contenedor Azul */
+.section_Pago{
+    margin-top: 5%;
+    height: 30vh;
+    
+    /* border: blue 3px solid; */
+}
+.section_Pago h1{
+    font-size: 30px;
+}
+.cont_Pago{
+    display: flex;
+    justify-content: center;
+    /* border: red 3px solid; */
+}
+.titular_Tarjeta, .num_Tarjeta, .cvv_Tarjeta, .fecha_Tarjeta{
+    margin-left: 10%;
+    /* border: green 3px solid;
+    border-radius: 5px; */
+}
+
+
+.redondo{
+    border-radius: 5px;
+    padding: 8px;
+}
+
 .large-row {
     text-align: right;
     border: 2px solid #6D0000;
