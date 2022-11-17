@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,15 +16,15 @@
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="../Exclusivo/index.html">Exclusivos</a>
-                    <a href="../vinos/index.html">Vinos</a>
+                    <a href="../exclusivo/index.php">Exclusivos</a>
+                    <a href="../vinos/index.php">Vinos</a>
                     <a href="../">
                         <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="../vinedos/index.html">Viñedos</a>
+                    <a href="../vinedos/index.php">Viñedos</a>
 
                     <div class="icono-user">
-                         <a href="../login/index.html"> 
+                         <a href="../login/index.php"> 
                          <img src="../imagenes/icono-user.svg " alt="#">
 
                     </a>
@@ -33,11 +33,11 @@
                 </nav>
                 
                 <div class="enlaces-header">
-                    <a href="../Lupa/index.html">
+                    <a href="../Lupa/index.php">
                         <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="../carrito/index.html">
+                    <a href="../carrito/index.php">
                         <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>

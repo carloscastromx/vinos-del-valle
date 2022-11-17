@@ -1,5 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    session_start();
+
+    if(isset($_GET['vino'])){
+        $id_vino = $_GET['vino'];
+
+        $server = "localhost";
+        $user= "u480286810_Raul";
+        $pass_bd = "wEbwo4-robmew-mivnir";
+        $bd = "u480286810_VDV";
+
+        $correo = $_POST['user-mail'];
+        $pass = $_POST['user-pass'];
+
+        $conexion = new mysqli($server,$user,$pass_bd,$bd);
+
+        if ($conexion->connect_error) {
+            die($conexion->connect_error);
+        } else {
+            $query = "SELECT id_vinos, vinos.nombre as nom_vino, vinedo.nombre as nom_vinedo, descripcion, imagen, precio FROM vinos INNER JOIN vinedo on vinedo.id_vinedo = vinos.id_vinedo WHERE id_vinos = '$id_vino'";
+            $res_sql = mysqli_query($conexion,$query);
+            $vinos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
+
+            mysqli_free_result($res_sql);
+
+            mysqli_close($conexion);
+        }
+    }
+    
+?>
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,15 +44,15 @@
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="../Exclusivo/index.html">Exclusivos</a>
-                    <a href="../vinos/index.html">Vinos</a>
+                    <a href="../exclusivo/index.php">Exclusivos</a>
+                    <a href="../vinos/index.php">Vinos</a>
                     <a href="../">
                         <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="../vinedos/index.html">Viñedos</a>
+                    <a href="../vinedos/index.php">Viñedos</a>
 
                     <div class="icono-user">
-                         <a href="../login/index.html"> 
+                         <a href="../login/index.php"> 
                          <img src="../imagenes/icono-user.svg " alt="#">
 
                     </a>
@@ -32,11 +61,11 @@
                 </nav>
                 
                 <div class="enlaces-header">
-                    <a href="../Lupa/index.html">
+                    <a href="../Lupa/index.php">
                         <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="../carrito/index.html">
+                    <a href="../carrito/index.php">
                         <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>
@@ -45,17 +74,18 @@
     </header>
 
                 <!-- Carlos aqui va tu codigo para mostrar el producto -->
+<?php foreach($vinos as $vino){ ?>
     <div class="cont-Producto">
         <div class="contIzquierda">
             <div class="contRojo">
-
+                <img src="https://vinosdelvalle.store/imagenes/vinos/<?php echo ucfirst(strtolower($vino['imagen'])) ; ?>" alt="<?php echo $vino['nom_vino']; ?>">
             </div>
 
         </div>
         <div class="contDerecha">
-            <h1>Producto 1</h1>
-            <h2>Viñedo de Procedencia</h2>
-            <p>Fusce eu odio sit amet ligula laoreet faucibus. Maecenas non venenatis ipsum. Phasellus elementum scelerisque ultrices. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+            <h1><?php echo $vino['nom_vino'] ?></h1>
+            <h2><?php echo $vino['nom_vinedo'] ?></h2>
+            <p><?php echo $vino['descripcion'] ?></p>
 
             <div class="contBotones">
                 <img src="../imagenes/icon-heart.png">
@@ -63,16 +93,17 @@
                 
             </div>
             <div class="precio">
-                    <a>$5,000</a>
+                    <a>$<?php echo number_format((float)$vino['precio'],0,".",","); ?></a>
             </div>
             <div class="labelCant">
-                <a>FormsHTMLCantSelector</a>
+                <input type="number" name="cant" id="cant" min="1">
             </div>
             <div class="buttonAñadir">
-                <input type="submit" value="Añadir al Carrito">
+                <a id="agregar-carrito" href="#">Añadir al Carrito</a>
             </div>
         </div>
     </div>
+<?php } ?>
     <footer>
         <div class="contenedor">
             <h3>Contáctenos</h3>

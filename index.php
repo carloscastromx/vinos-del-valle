@@ -7,7 +7,7 @@
     $conexion = new mysqli($server,$user,$pass_bd,$bd);
 
     if ($conexion->connect_error) {
-        die("Error de conexión: " . $conexion->connect_error);
+        die($conexion->connect_error);
     } else {
         
         $query = "SELECT id_vinos, vinos.nombre as nom_vino, vinedo.nombre as nom_vinedo, precio, imagen From vinos INNER JOIN vinedo on vinedo.id_vinedo = vinos.id_vinedo ORDER BY precio DESC LIMIT 8";
@@ -39,15 +39,15 @@
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="../Exclusivo/index.html">Exclusivos</a>
-                    <a href="../vinos/index.html">Vinos</a>
+                    <a href="../exclusivo/index.php">Exclusivos</a>
+                    <a href="../vinos/index.php">Vinos</a>
                     <a href="../">
                         <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="../vinedos/index.html">Viñedos</a>
+                    <a href="../vinedos/index.php">Viñedos</a>
 
                     <div class="icono-user">
-                         <a href="../login/index.html"> 
+                         <a href="../login/index.php"> 
                          <img src="../imagenes/icono-user.svg " alt="#">
 
                     </a>
@@ -56,11 +56,11 @@
                 </nav>
                 
                 <div class="enlaces-header">
-                    <a href="../Lupa/index.html">
+                    <a href="../Lupa/index.php">
                         <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="../carrito/index.html">
+                    <a href="../carrito/index.php">
                         <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>
@@ -69,21 +69,21 @@
     </header>
     <section class="contenedor">
         <div class="tarjetas-home">
-            <a id="link" href="vinedos/index.html">
+            <a id="link" href="vinedos/index.php">
             <div class="tarjeta-home vinedos">
                 <div class="contenido">
                  <h3>Viñedos</h3>
                 </div>
             </a>
             </div>
-            <a id="link" href="vinos/index.html">
+            <a id="link" href="vinos/index.php">
             <div class="tarjeta-home vinos">
                 <div class="contenido">
                     <h3>Vinos</h3>
                 </div>
             </a>
             </div>
-            <a id="link" href="Exclusivo/index.html">
+            <a id="link" href="exclusivo/index.php">
             <div class="tarjeta-home exclusivos">
                 <div class="contenido">
                     <h3>Viñedos</h3>
@@ -95,7 +95,7 @@
             <h2>Populares</h2>
             <div class="vinos-cont">
             <?php foreach($productos as $vino){ ?>
-                <div class="prod1">
+                <a class="prod1" href="producto/producto.php?vino=<?php echo $vino['id_vinos']; ?>">
                     <div class="overlap-group-container">
                         <div class="image-container">
                             <img class="vinoImg" src="https://vinosdelvalle.store/imagenes/vinos/<?php echo ucfirst(strtolower($vino['imagen'])) ; ?>" alt="image 3"/>
@@ -109,7 +109,7 @@
                             <div class="titulo-3">$<?php echo number_format((float)$vino['precio'],0,".",","); ?></div>
                         </div>
                     </div>
-                </div>
+                </a>
             <?php } ?>
             </div>
         </div>
@@ -130,7 +130,7 @@
             <h2>Ordene Ahora</h2>
             <p> </p>
             <div class="botones-ordenar">
-                <a href="vinos/index.html">Online</a>
+                <a href="vinos/index.php">Online</a>
                 <a href="https://u.cornershopapp.com/store/98/search/Vinos" class="btn-uber-eats">
                     <img src="imagenes/UberText.png" alt="">
                 </a>

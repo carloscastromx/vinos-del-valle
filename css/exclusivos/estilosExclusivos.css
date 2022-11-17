@@ -97,13 +97,6 @@ header .enlaces-header div.vertical{
     font-size: 26px;
 }
 
-.imagenExclusivo img{
-    
-    width: 100%;
-    padding-top: 5%;
-
-}
-
 .section2{
     width:100%;
     /* background-color: red; */
@@ -208,3 +201,10 @@ header .icono-user{
 }
 /* ======= */
 /* >>>>>>> daniel*/
+.imagenExclusivo{
+    min-height: 800px;
+    background: url(../../imagenes/viñedoExclusivo.png);
+    background-size: cover;
+    padding: 80px 0;
+    margin: 20px 0;
+}

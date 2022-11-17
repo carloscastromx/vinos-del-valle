@@ -15,15 +15,15 @@
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="../Exclusivo/index.html">Exclusivos</a>
-                    <a href="../vinos/index.html">Vinos</a>
+                    <a href="../exclusivo/index.php">Exclusivos</a>
+                    <a href="../vinos/index.php">Vinos</a>
                     <a href="../">
                         <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="../vinedos/index.html">Viñedos</a>
+                    <a href="../vinedos/index.php">Viñedos</a>
 
                     <div class="icono-user">
-                         <a href="../login/index.html"> 
+                         <a href="../login/index.php"> 
                          <img src="../imagenes/icono-user.svg " alt="#">
 
                     </a>
@@ -32,11 +32,11 @@
                 </nav>
                 
                 <div class="enlaces-header">
-                    <a href="../Lupa/index.html">
+                    <a href="../Lupa/index.php">
                         <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="../carrito/index.html">
+                    <a href="../carrito/index.php">
                         <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>
@@ -58,7 +58,7 @@
             te dejo para que pongas el hypervinculo
          el id de san Lince es= 1-->
 
-                <h2><a href=""> Lince </a> </h2>
+                <h2><a href="../Lupa/index.php?vinedo=1"> Lince </a> </h2>
                 <p>Ciudad de México</p>
             </div>
            
@@ -73,8 +73,8 @@
             <!-- Carlitos aqui va el codigo para que redireccione
             a la pagina de la lupa y Saques los vinos que sean de San Rafa
             el id de san rafa es= 2 -->
-            <h2><a href=""> San Rafa </a></h2>
-            <p>San Miguel De Allande</p>
+            <h2><a href="../Lupa/index.php?vinedo=2"> San Rafa </a></h2>
+            <p>San Miguel De Allende</p>
         </div>
     </section>
     <section class="datos-vinedo alt">
@@ -83,7 +83,7 @@
     </section>
     <section class="vinedo-banner vinedo-3">
         <div class="contenedorMon">
-            <h2><a href="../Exclusivo/index.html"> Mondragon </a>  </h2>
+            <h2><a href="../exclusivo/index.php"> Mondragon </a>  </h2>
             <p>Guanajato</p>
         </div>
     </section>

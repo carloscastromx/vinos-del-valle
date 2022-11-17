@@ -18,7 +18,7 @@
         $conexion = new mysqli($server,$user,$pass_bd,$bd);
 
         if ($conexion->connect_error) {
-            die("Error de conexión: " . $conexion->connect_error);
+            die($conexion->connect_error);
         } else {
             //Buscar alias por si ya existe
             $query = "SELECT * FROM clientes WHERE alias = '$alias'";
@@ -55,7 +55,7 @@
     
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,10 +76,10 @@
                     <a href="../">
                         <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="../vinedos/index.html">Viñedos</a>
+                    <a href="../vinedos/index.php">Viñedos</a>
 
                     <div class="icono-user">
-                         <a href="../login/index.html"> 
+                         <a href="../login/index.php"> 
                          <img src="../imagenes/icono-user.svg " alt="#">
 
                     </a>
@@ -92,7 +92,7 @@
                         <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="../carrito/index.html">
+                    <a href="../carrito/index.php">
                         <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>
