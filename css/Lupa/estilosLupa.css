@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #EEEDD9;
+}
+@import url("https://fonts.googleapis.com/css?family=League+Spartan:400,200,100|Libre+Baskerville:400,400italic|Karma:400|Ledger:400|Lexend+Tera:400|M+Plus+1+Code:400|Playfair+Display:ital@1&display=swap");
+header{
+    padding: 20px;
+}
+header .fila{
+    display: flex;
+    justify-content: space-between;
+}
+header nav{
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav a{
+    display: inline-block;
+    font-family: 'Karma';
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+}
+header .enlaces-header{
+    padding-top: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+header .enlaces-header a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-family: "Karma";
+    color: #000;
+    font-size: 20px;
+
+    
+}
+
+
+header .enlaces-header a img {
+    width: 100%;
+}
+header .enlaces-header div.vertical{
+    margin: 0 15px;
+    border: 10px solid rgba(0, 0, 0, 0.36);
+    height: 30px;
+}
+
+
+
+
+header .enlaces-header div.LoginText{
+    margin: 0 15px;
+    
+    height: 30px;
+}
+
+header .Busqueda {
+    width: 35px;
+    height: 35px;
+    background-color: #fcfcfc00;
+    display: flex;
+    border-radius: 0.5rem;
+    justify-content: center;
+    width: 100%;
+}
+header .icono-user{
+
+    justify-content: flex-end;
+    
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
+}
+
+.Busqueda input{
+    font-size: 20px;
+    background-color: #E9D4C1;
+    width: 90%;
+    height: 100%;
+    border-radius: 0.5rem;
+    border: #EEEDD9;
+}
+
+.enlacesLupa {
+    
+    border-radius: 1rem;
+    background-color: #14121200;
+    border: #000;
+    display: flex;
+    text-align: justify;
+    height: 50vh;
+    width: 20%;
+    justify-content:  center;
+
+}
+.textoLupa{
+    padding-top: 15%;
+}
+.textoLupa ul{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    list-style-type: none;
+}
+/*Esto es el div del menu de alado */
+.textoLupa a{
+
+    color: #000;
+    font-family: 'Karma';
+    font-size: 30px;
+}
+
+.textoLupa a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .busqueda {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+
+.textoLupa a:hover {
+    color: rgb(119, 38, 76);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .textoLupa a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+
+footer{
+    background: #4F0808;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: #fff;
+    font-family: 'League Spartan';
+}
+footer .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer h3{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+}
+footer .iconos-redes-sociales{
+    margin: 90px 0;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .iconos-redes-sociales a img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+}
+footer .datos-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .datos-footer .correo{
+    text-decoration: underline;
+}
+footer .datos-footer .copyright{
+    width: 100%;
+    text-align: right;
+}
+.prod1{
+    width: 26%;
+}

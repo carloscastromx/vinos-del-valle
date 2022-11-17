@@ -15,20 +15,28 @@
         <div class="contenedor">
             <div class="fila">
                 <nav class="menu">
-                    <a href="../exclusivos/">Exclusivos</a>
-                    <a href="../vinos/">Vinos</a>
+                    <a href="../exclusivo/index.php">Exclusivos</a>
+                    <a href="../vinos/index.php">Vinos</a>
                     <a href="../">
                         <img src="../imagenes/logo_vinos_del_valle.svg" alt="LogoIMG" height="50">
                     </a>
-                    <a href="../vinedos/">Viñedos</a>
-                    <a href="../login">Login</a>
+                    <a href="../vinedos/index.php">Viñedos</a>
+
+                    <div class="icono-user">
+                         <a href="../login/index.php"> 
+                         <img src="../imagenes/icono-user.svg " alt="#">
+
+                    </a>
+                    </div>
+                   
                 </nav>
+                
                 <div class="enlaces-header">
-                    <a href="../busqueda/">
+                    <a href="../Lupa/index.php">
                         <img src="../imagenes/icono-lupa.svg" alt="#">
                     </a>
                     <div class="vertical"></div>
-                    <a href="../carrito/">
+                    <a href="../carrito/index.php">
                         <img src="../imagenes/icono-carrito.svg" alt="#">
                     </a>
                 </div>
@@ -38,46 +46,62 @@
     <section class="contenedor">
         <h1 class="vinedos-h1">Viñedos</h1>
         <p class="nuestros-vinedos">Nuestros Viñedos</p>
-        <p class="vinedos-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget iaculis metus, ut maximus libero. Aliquam sed quam nec mi pretium ullamcorper a luctus leo. </p>
+        <p class="vinedos-txt">Conoce nuestra colección de viñedos que dejaran hasta el paladar
+            más exigente satisfecho </p>
     </section>
     <section class="vinedo-banner vinedo-1">
-        <div class="contenedor">
-            <h2>Viñedo 1</h2>
-            <p>Ubicación</p>
+        
+            
+            <div class="contenedorLince">
+                 <!-- Carlitos aqui va el codigo para que redireccione
+            a la pagina de la lupa y Saques los vinos que sean de Lince 
+            te dejo para que pongas el hypervinculo
+         el id de san Lince es= 1-->
+
+                <h2><a href="../Lupa/index.php?vinedo=1"> Lince </a> </h2>
+                <p>Ciudad de México</p>
+            </div>
+           
         </div>
     </section>
     <section class="datos-vinedo">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget iaculis metus, ut maximus libero. Aliquam sed quam nec mi pretium ullamcorper a luctus leo. </p>
+        <p>Para personas que ya estan en el mundo del vino pero aún desean encontrar nuevas sensaciones </p>
     </section>
     <section class="vinedo-banner vinedo-2">
-        <div class="contenedor">
-            <h2>Viñedo 2</h2>
-            <p>Ubicación</p>
+        <div class="contenedorSanRafa">
+
+            <!-- Carlitos aqui va el codigo para que redireccione
+            a la pagina de la lupa y Saques los vinos que sean de San Rafa
+            el id de san rafa es= 2 -->
+            <h2><a href="../Lupa/index.php?vinedo=2"> San Rafa </a></h2>
+            <p>San Miguel De Allende</p>
         </div>
     </section>
     <section class="datos-vinedo alt">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget iaculis metus, ut maximus libero. Aliquam sed quam nec mi pretium ullamcorper a luctus leo. </p>
+        <p>Nuestro viñedo para aquellas personas que desean experimentar nuevas sensaciones,
+            desde un vino tinto hasta un rosado </p>
     </section>
     <section class="vinedo-banner vinedo-3">
-        <div class="contenedor">
-            <h2>Viñedo 3</h2>
-            <p>Ubicación</p>
+        <div class="contenedorMon">
+            <h2><a href="../exclusivo/index.php"> Mondragon </a>  </h2>
+            <p>Guanajato</p>
         </div>
     </section>
     <section class="datos-vinedo">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget iaculis metus, ut maximus libero. Aliquam sed quam nec mi pretium ullamcorper a luctus leo. </p>
+        <p>El viñedo que extiende los sabores para aquellas personas 
+            que desean probar lo mejor de la casa, hasta el paladar más exigente se rinde a este viñedo </p>
     </section>
     <footer>
         <div class="contenedor">
             <h3>Contáctenos</h3>
             <div class="iconos-redes-sociales">
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=100087619160116">
                     <img src="../imagenes/icon-facebook.png" alt="">
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/vinosdelvalle2022">
                     <img src="../imagenes/icon-instagram.png" alt="">
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/vdelvalle2022">
                     <img src="../imagenes/icon-twitter.png" alt="">
                 </a>
             </div>

@@ -1,27 +1,33 @@
-<?php 
+<?php
+    session_start();
+
+    if(!isset($_SESSION["login"])){
+        header("Location: https://vinosdelvalle.store/login/index.php?error=Debes iniciar sesión para ver los vinos exclusivos");
+        exit();
+    }
+
     $server = "localhost";
     $user= "u480286810_Raul";
     $pass_bd = "wEbwo4-robmew-mivnir";
     $bd = "u480286810_VDV";
+
+    $correo = $_POST['user-mail'];
+    $pass = $_POST['user-pass'];
 
     $conexion = new mysqli($server,$user,$pass_bd,$bd);
 
     if ($conexion->connect_error) {
         die($conexion->connect_error);
     } else {
-        
-        $query = "SELECT id_vinos, vinos.nombre as nom_vino, vinedo.nombre as nom_vinedo, precio, imagen From vinos INNER JOIN vinedo on vinedo.id_vinedo = vinos.id_vinedo ORDER BY precio DESC LIMIT 8";
+        $query = "SELECT id_vinos, vinos.nombre as nom_vino, vinedo.nombre as nom_vinedo, imagen, precio FROM vinos INNER JOIN vinedo on vinedo.id_vinedo = vinos.id_vinedo WHERE vinedo.id_vinedo = 3";
         $res_sql = mysqli_query($conexion,$query);
-
-        $productos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
+        $vinos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
 
         mysqli_free_result($res_sql);
 
         mysqli_close($conexion);
-        
     }
 ?>
-<!DOCTYPE html>
 <html lang="es-mx">
 <head>
     <meta charset="UTF-8">
@@ -31,8 +37,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karma&family=League+Spartan&family=Ledger&family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilos.css"> 
-    <link rel="stylesheet" href="css/vinos/vinos.css">
+    <link rel="stylesheet" href="../css/vinos/vinos.css">
+    <link rel="stylesheet" href="../css/exclusivos/estilosExclusivos.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
 </head>
 <body>
     <header>
@@ -67,38 +75,24 @@
             </div>
         </div>
     </header>
-    <section class="contenedor">
-        <div class="tarjetas-home">
-            <a id="link" href="vinedos/index.php">
-            <div class="tarjeta-home vinedos">
-                <div class="contenido">
-                 <h3>Viñedos</h3>
-                </div>
-            </a>
-            </div>
-            <a id="link" href="vinos/index.php">
-            <div class="tarjeta-home vinos">
-                <div class="contenido">
-                    <h3>Vinos</h3>
-                </div>
-            </a>
-            </div>
-            <a id="link" href="exclusivo/index.php">
-            <div class="tarjeta-home exclusivos">
-                <div class="contenido">
-                    <h3>Viñedos</h3>
-                </div>
-            </a>
-            </div>
+
+    <section class="exclusivosHero">
+        <div class="tituloExclusivos">
+            <h1>VINOS</h1>
+            <h2>- Exclusivos -</h2>
+            <p>Nuestro mejor viñedo para nuestros clientes más leales y con el gusto más difícil de satisfacer </p>
         </div>
-        <div class="vinos-populares">
-            <h2>Populares</h2>
+
+      
+
+        <div class="imagenExclusivo">
+          <!-- Carlos aqui se deberian mostrar los vinos del Exclusivo -->
             <div class="vinos-cont">
-            <?php foreach($productos as $vino){ ?>
-                <a class="prod1" href="producto/producto.php?vino=<?php echo $vino['id_vinos']; ?>">
+            <?php foreach($vinos as $vino){ ?>
+                <a class="prod1" href="../producto/producto.php?vino=<?php echo $vino['id_vinos']; ?>">
                     <div class="overlap-group-container">
                         <div class="image-container">
-                            <img class="vinoImg" src="https://vinosdelvalle.store/imagenes/vinos/<?php echo ucfirst(strtolower($vino['imagen'])) ; ?>" alt="image 3"/>
+                            <img class="vinoImg" src="https://vinosdelvalle.store/imagenes/vinos/<?php echo ucfirst(strtolower($vino['imagen'])) ; ?>" alt="<?php echo $vino['nom_vino']; ?>"/>
                         </div>
                         <div class="overlap-group">
                             <div class="overlap-group-1">
@@ -113,44 +107,36 @@
             <?php } ?>
             </div>
         </div>
-        <div class="nuestra-historia">
-            <div class="col-texto">
-                <h2>Nuestra Historia</h2>
-                <p>La historia de Vinos Del Valle se remonta al año 1974 con la pasión de Juan B. Morales Doria y a la visión y emprendedurismo de Juan B. Morales Gonzalez, </p>
-                <p>quien gracias a ellos se cristaliza la idea de hacer los mejores vinos de la región de Norte America</p>
-            </div>
-            <div class="col-img">
-                <img src="imagenes/img-nuestra-historia.png" alt="">
-                <div class="recuadro"></div>
-            </div>
+
+     
+        
+
+    </section>
+
+    <section class = "section2">
+        <div class="descripcion_Exclusivo">
+            <p>
+                Cuidadosamente elaborados en Guanjato donde mas de 100 personas mexicanas estan involucradas en el proceso
+            </p>
+
         </div>
     </section>
-    <section class="ordena-ahora">
-        <div class="contenedor">
-            <h2>Ordene Ahora</h2>
-            <p> </p>
-            <div class="botones-ordenar">
-                <a href="vinos/index.php">Online</a>
-                <a href="https://u.cornershopapp.com/store/98/search/Vinos" class="btn-uber-eats">
-                    <img src="imagenes/UberText.png" alt="">
-                </a>
-            </div>
-        </div>
-    </section>
-   
+<!-- <<<<<<< rogelio -->
+
+<!-- ======= -->
+<!-- >>>>>>> daniel -->
     <footer>
         <div class="contenedor">
             <h3>Contáctenos</h3>
             <div class="iconos-redes-sociales">
 <!-- <<<<<<< rogelio -->
                 <a href="https://www.facebook.com/profile.php?id=100087619160116">
-                    <img src="imagenes/icon-facebook.png" alt="">
+                    <img src="../imagenes/icon-facebook.png" alt="">
                 </a>
                 <a href="https://www.instagram.com/vinosdelvalle2022">
-                    <img src="imagenes/icon-instagram.png" alt="">
+                    <img src="../imagenes/icon-instagram.png" alt="">
                 </a>
                 <a href="https://twitter.com/vdelvalle2022">
-                    <img src="imagenes/icon-twitter.png" alt="">
 <!-- ======= -->
                 <a href="#">
                     <img src="../imagenes/icon-facebook.png" alt="">
@@ -159,8 +145,8 @@
                     <img src="../imagenes/icon-instagram.png" alt="">
                 </a>
                 <a href="#">
-                    <img src="../imagenes/icon-twitter.png" alt="">
 <!-- >>>>>>> daniel -->
+                    <img src="../imagenes/icon-twitter.png" alt="">
                 </a>
             </div>
             <div class="datos-footer">
@@ -170,5 +156,6 @@
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

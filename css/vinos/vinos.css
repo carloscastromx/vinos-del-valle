@@ -5,8 +5,17 @@
 body{
     background-color: #EEEDD9;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-@import url("https://fonts.googleapis.com/css?family=League+Spartan:400|Libre+Baskerville:400,400italic|Karma:400|Ledger:400|Lexend+Tera:400|M+Plus+1+Code:400");
+a{
+    text-decoration: none;
+}
+
+@import url("https://fonts.googleapis.com/css?family=League+Spartan:400,200,100|Libre+Baskerville:400,400italic|Karma:400|Ledger:400|Lexend+Tera:400|M+Plus+1+Code:400|Playfair+Display:ital@1&display=swap");
 
 .contenedor{
     width: 90%;
@@ -20,6 +29,19 @@ header .fila{
     display: flex;
     justify-content: space-between;
 }
+header .icono-user{
+
+    justify-content: center;
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
+}
+
 header nav{
     width: 85%;
     display: flex;
@@ -58,26 +80,32 @@ header .enlaces-header div.vertical{
 }
 
 .inicioVinos .tituloVinos{
+    margin-top: 5%;
     
 
     font-family: 'Ledger';
-    font-size: 48px;
+    font-size: 70px;
 
     /* border: green 3px solid; */
 }
 
 .inicioVinos .subtitleVinos{
-    font-family: 'Ledger';
-    font-size: 16px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
 
     /* border: red 3px solid; */
 }
 .inicioVinos p{
     text-align: center;
     
-
+    margin-left: 25%;
+    width: 50%;
     font-family: 'Ledger';
-    font-size: 16px;
+    font-size: 26px;
 
 }
 
@@ -227,4 +255,46 @@ header .enlaces-header div.vertical{
     font-family: 'League Spartan';
     font-size: 36px;
     color:#DBCAD3;
+}
+
+footer{
+    background: #4F0808;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: #fff;
+    font-family: 'League Spartan';
+}
+footer .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer h3{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+}
+footer .iconos-redes-sociales{
+    margin: 90px 0;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .iconos-redes-sociales a img{
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+}
+footer .datos-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .datos-footer .correo{
+    text-decoration: underline;
+}
+footer .datos-footer .copyright{
+    width: 100%;
+    text-align: right;
 }

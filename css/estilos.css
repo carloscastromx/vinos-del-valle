@@ -13,11 +13,66 @@ body{
     flex-direction: column;
 
 }
+
 .contenedor{
     width: 90%;
     max-width: 1400px;
     margin: auto;
+    
 }
+header .icono-user{
+
+    justify-content: center;
+    display: flex;
+    
+}
+
+.icono-user img{
+    height: 5vh;
+    width: 5vw;
+
+}
+
+.vinedo-banner .vinedo-3 .contenedor a{
+    color: red;
+}
+
+.contenedorMon a{
+    color: #ebbb38;
+    margin: 0;
+    width: auto;
+    padding: 0 230px 100px 0;
+}
+
+.contenedorMon a:hover{
+    color: #c0662a;
+   
+
+}
+
+
+.contenedorSanRafa a{
+    color: #d5b036;
+    margin: 0;
+    width: auto;
+    padding: 0 230px 100px 0;
+}
+
+.contenedorSanRafa a:hover{
+    color: #d3ff32;
+}
+
+.contenedorLince a{
+    color: #818f30;
+    margin: 0;
+    width: auto;
+    padding: 0 230px 100px 0;
+}
+
+.contenedorLince a:hover{
+    color: bisque;
+}
+
 header{
     padding: 20px;
 }
@@ -94,16 +149,15 @@ header .enlaces-header div.vertical{
     font-family: 'Ledger';
     border-radius: 22px;
 }
-.tarjeta-home .contenido a{
+.tarjeta-home .contenido a, .tarjeta-home h3{
     color: #fff;
-    font-size: 50px;
+    font-size: 30px;
     text-transform: uppercase;
 }
 
 .tarjeta-home:hover .contenido{
     opacity: 1;
 }
-
 .nuestra-historia{
     padding: 200px 0;
     display: flex;
@@ -117,12 +171,13 @@ header .enlaces-header div.vertical{
     width: 60%;
     position: relative;
 }
-.nuestra-historia .col-img .recuadro{
+.nuestra-historia .col-img .col-texto{
+    display: flexbox;
     width: 300px;
     height: 106px;
     background: #2D1212;
     border-radius: 0px 21px 56px 0px;
-    position: absolute;
+    position: relative;
     bottom: -66px;
     left: 30px;
 }
@@ -137,6 +192,7 @@ header .enlaces-header div.vertical{
     line-height: 1.5;
     font-size: 25px;
     font-family: 'Ledger';
+    text-align: justify;
 }
 .nuestra-historia .col-texto p:nth-child(2){
     margin: 20px 0;
@@ -268,6 +324,8 @@ h1.vinedos-h1{
 }
 .vinedo-banner.vinedo-1{
     background-image: url(../imagenes/vinedo-1-banner.png);
+    
+   
 }
 .vinedo-banner.vinedo-2{
     background-image: url(../imagenes/vinedo-2-banner.png);
@@ -275,6 +333,7 @@ h1.vinedos-h1{
 .vinedo-banner.vinedo-3{
     background-image: url(../imagenes/vinedo-3-banner.png);
 }
+
 .vinedo-banner{
     background-size: cover;
     min-height: 800px;
@@ -300,6 +359,24 @@ h1.vinedos-h1{
     font-family: 'Lexend Tera';
     text-transform: uppercase;
 }
+
+.vinedo-banner.vinedo-3 .contenedor-3 a{
+    font-family: 'Lexend Tera';
+    text-transform: uppercase;
+    padding: 0 0 100px 130px;
+    color: #06f552;
+  
+
+}
+
+.vinedo-banner.vinedo-3 .contenedor p{
+    color: #fff;
+    font-family: 'M PLUS 1 Code';
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+
 .vinedo-banner p{
     color: #fff;
     font-family: 'M PLUS 1 Code';
@@ -321,137 +398,3 @@ h1.vinedos-h1{
     margin: auto;
 }
 
-/* --------------------CARRITO-----------------------------*/ 
-
-.main-carrito h1 {
-    font-family: 'League Spartan';
-    text-align: left;
-    color: #000;
-    font-size: 40px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-.producto-carrito {
-    display: flex;
-    align-content: center;
-    border: 2px solid #6D0000;
-    justify-content: flex-start;
-    flex-direction: row;
-    background: #e5dcd1;
-    width: 100%;
-}
-.producto-carrito img {
-    width: auto;
-    max-height: 130px;
-}
-.datos-producto-carrito p {
-    color: #C7C7C7;
-}
-.total-row {
-    text-align: right;
-    border: 2px solid #6D0000;
-    border-top: none;
-    padding: 10px;
-    background-color: #e5dcd1;
-    display: flex;
-    justify-content: flex-end;
-    font-family: 'League Spartan';
-}
-.large-row {
-    text-align: right;
-    border: 2px solid #6D0000;
-    background: #e5dcd1;
-    border-bottom: none;
-}
-div.total-row p {
-    width: 25%;
-    font-size: 20px;
-}
-div.total-row p.precio{
-    text-align: center;
-}
-div.total-row p:not(.precio){
-    padding-right: 40px;
-}
-.btn-carrito-row {
-    text-align: right;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-a.boton-pago {
-    font-family: 'League Spartan';
-    background-color: #AE1616;
-    border-radius: 23px;
-    color: white;
-    width: 55%;
-    padding: 8px 36px;
-    text-decoration: none;
-    font-size: 22px;
-}
-
-.divTable{
-    display: flex;
-    width: 100%;
-}
-.divTableRow {
-    display: flex;
-    width: 100%;
-    padding: 8px;
-}
-.divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-}
-.divTableCell, .divTableHead {
-        padding: 3px 10px;
-        text-align: center;
-        width: 25%;
-        font-family: 'League Spartan';
-        font-size: 22px;
-}
-.divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-	font-weight: bold;
-}
-.divTableFoot {
-	background-color: #EEE;
-	display: table-footer-group;
-	font-weight: bold;
-}
-.divTableBody {
-    width: 100%;
-    display: flex;
-}
-.producto-carrito{
-    width: 100%;
-    display: flex;
-    font-family: 'League Spartan';
-}
-.producto-carrito > div {
-    width: 25%;
-    text-align: center;
-    border-right: 2px solid #3A0101;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-}
-.producto-carrito .total-div{
-    border-right: none;
-}
-.producto-carrito .producto-div{
-    display: flex;
-    justify-content: center;
-}
-.producto-carrito .producto-div .imagen-producto{
-    margin-right: 35px;
-}
-.carrito-box{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.producto-carrito .producto-div .imagen-producto {
-    margin-right: 35px;
-}
