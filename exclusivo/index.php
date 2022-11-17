@@ -121,10 +121,6 @@
 
         </div>
     </section>
-<!-- <<<<<<< rogelio -->
-
-<!-- ======= -->
-<!-- >>>>>>> daniel -->
     <footer>
         <div class="contenedor">
             <h3>Contáctenos</h3>
@@ -137,15 +133,6 @@
                     <img src="../imagenes/icon-instagram.png" alt="">
                 </a>
                 <a href="https://twitter.com/vdelvalle2022">
-<!-- ======= -->
-                <a href="#">
-                    <img src="../imagenes/icon-facebook.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="../imagenes/icon-instagram.png" alt="">
-                </a>
-                <a href="#">
-<!-- >>>>>>> daniel -->
                     <img src="../imagenes/icon-twitter.png" alt="">
                 </a>
             </div>
