@@ -1,5 +1,46 @@
 <?php 
     session_start();
+
+    if(!isset($_SESSION['carrito'])){
+        $_SESSION['carrito'] = array();
+    }
+
+    if(isset($_GET['vino']) && isset($_GET['cant'])){
+        $x = (int)$_GET['cant'];
+        for($i = 1; $i <= $x; $i++){
+            array_push($_SESSION['carrito'],$_GET['vino']);
+        }
+    }
+
+    $cant_array = array_count_values($_SESSION['carrito']);
+
+    $total_precio = 0;
+
+    $server = "localhost";
+    $user= "u480286810_Raul";
+    $pass_bd = "wEbwo4-robmew-mivnir";
+    $bd = "u480286810_VDV";
+
+    $conexion = new mysqli($server,$user,$pass_bd,$bd);
+
+    if ($conexion->connect_error) {
+        die("Error de conexión: " . $conexion->connect_error);
+    } else {
+        $ids_vinos = implode(",", $_SESSION['carrito']);
+
+        $query = "SELECT vinos.id_vinos, vinos.nombre as nom_vino, vinos.descripcion, vinos.imagen, vinos.precio, vinedo.nombre as nom_vinedo FROM vinos INNER JOIN vinedo ON vinedo.id_vinedo = vinos.id_vinedo WHERE id_vinos IN ($ids_vinos)";
+        $res_sql = mysqli_query($conexion,$query);
+        $vinos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
+
+        mysqli_free_result($res_sql);
+
+        mysqli_close($conexion);
+
+        foreach($vinos as $vino){
+            $total_precio += (float)$cant_array[$vino['id_vinos']] * (float)$vino['precio'];
+        }
+    }
+
 ?>
 <html lang="es-mx">
 <head>
@@ -63,29 +104,31 @@
             </div>
         
             <div class="carrito-box">
-                <div class="producto-carrito">
-                    <div class="producto-div">
-                        <div class="imagen-producto">
-                            <img src="../imagenes/vino-producto.png" alt="#">
+                <?php foreach($vinos as $vino){ ?>
+                    <div class="producto-carrito">
+                        <div class="producto-div">
+                            <div class="imagen-producto">
+                                <img src="../imagenes/vinos/<?php echo ucfirst(strtolower($vino['imagen'])) ; ?>" alt="#">
+                            </div>
+                            <div class="datos-producto-carrito">
+                                <h3><?php echo $vino['nom_vino']; ?></h3>
+                                <p><?php echo $vino['nom_vinedo']; ?></p>
+                            </div>
                         </div>
-                        <div class="datos-producto-carrito">
-                            <h3>Vinos</h3>
-                            <p>viñedo</p>
+                        <div class="precio-div">
+                            <p>$<?php echo number_format((float)$vino['precio'],0,".",","); ?></p>
+                        </div>
+                        <div class="cantidad-div">
+                            <p><?php echo $cant_array[$vino['id_vinos']]; ?></p>
+                        </div>
+                        <div class="total-div">
+                            <p>$<?php echo number_format((float)$cant_array[$vino['id_vinos']] * (float)$vino['precio'],0,".",","); ?></p>
                         </div>
                     </div>
-                    <div class="precio-div">
-                        <p>$150.59</p>
-                    </div>
-                    <div class="cantidad-div">
-                        <p>1</p>
-                    </div>
-                    <div class="total-div">
-                        <p>$150.59</p>
-                    </div>
-                </div>
+                <?php } ?>
                 <div class="total-row">
                     <p>Total</p>
-                    <p class="precio">$150.59</p>
+                    <p class="precio">$<?php echo number_format((float)$total_precio,0,".",","); ?></p>
                 </div>
             </div>
 
