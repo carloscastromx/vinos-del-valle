@@ -1,6 +1,11 @@
 <?php 
     session_start();
 
+    if(isset($_SESSION["login"])){
+        header("Location: https://vinosdelvalle.store/User/index.php");
+        exit();
+    }
+
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $server = "localhost";
         $user= "u480286810_Raul";
@@ -23,6 +28,7 @@
 
             if($filas_query > 0){
                 $_SESSION["login"] = '1';
+                $_SESSION['user-id'] = $correo;
                 header("Location: https://vinosdelvalle.store/login/index.php?exito=Inicio de sesión exitoso");
                 exit();
             } else {
@@ -114,7 +120,11 @@
             </div>
         </form>
     </div>
-
+<?php if(isset($_GET['exito'])){ ?>
+    <script>
+        setTimeout(() => window.location.href = "https://vinosdelvalle.store/User/index.php", 1500);
+    </script>
+    <?php } ?>
     
 </body>
 </html>

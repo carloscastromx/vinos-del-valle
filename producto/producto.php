@@ -37,7 +37,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karma&family=League+Spartan&family=Ledger&family=Libre+Baskerville&family=Lexend+Tera&family=M+PLUS+1+Code&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/producto/estilosProducto.css"> 
+    <link rel="stylesheet" href="../css/producto/estilosProducto.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> 
 </head>
 <body>
     <header>
@@ -75,7 +76,7 @@
 
                 <!-- Carlos aqui va tu codigo para mostrar el producto -->
 <?php foreach($vinos as $vino){ ?>
-    <div class="cont-Producto">
+    <div class="cont-Producto" vino-id="<?php echo $vino['id_vinos'] ?>">
         <div class="contIzquierda">
             <div class="contRojo">
                 <img src="https://vinosdelvalle.store/imagenes/vinos/<?php echo ucfirst(strtolower($vino['imagen'])) ; ?>" alt="<?php echo $vino['nom_vino']; ?>">
@@ -96,10 +97,12 @@
                     <a>$<?php echo number_format((float)$vino['precio'],0,".",","); ?></a>
             </div>
             <div class="labelCant">
-                <input type="number" name="cant" id="cant" min="1">
+                <form action="#">
+                <input type="number" name="cant" id="cant" min="1" required>
             </div>
             <div class="buttonAñadir">
-                <a id="agregar-carrito" href="#">Añadir al Carrito</a>
+                <input type="submit" id="agregar-carrito" value="Añadir al Carrito">
+                </form>
             </div>
         </div>
     </div>
@@ -125,6 +128,18 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+        $(document).ready(function(){
+            $("form").submit(function(e){
+                e.preventDefault();
+                var cant = parseInt($("#cant").val());
+                var id_vino = $(".cont-Producto").attr("vino-id");
+                if(cant >= 1){
+                    var url = "https://vinosdelvalle.store/carrito/index.php?vino="+id_vino.toString()+"&cant="+cant.toString();
+                    $(location).attr('href', url);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

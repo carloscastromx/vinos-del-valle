@@ -1,5 +1,31 @@
 <?php 
     session_start();
+
+    if(!isset($_SESSION["login"])){
+        header("Location: https://vinosdelvalle.store/login/index.php");
+        exit();
+    }
+
+    $server = "localhost";
+    $user= "u480286810_Raul";
+    $pass_bd = "wEbwo4-robmew-mivnir";
+    $bd = "u480286810_VDV";
+
+    $conexion = new mysqli($server,$user,$pass_bd,$bd);
+
+    if ($conexion->connect_error) {
+        die($conexion->connect_error);
+    } else {
+        $mail_cliente = $_SESSION['user-id'];
+        $query = "SELECT * FROM pedidos INNER JOIN clientes ON clientes.id_clientes = pedidos.id_clientes WHERE correo = '$mail_cliente'";
+        $res_sql = mysqli_query($conexion,$query);
+        
+        $pedidos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
+
+        mysqli_free_result($res_sql);
+
+        mysqli_close($conexion);
+    }
 ?>
 <html lang="es-mx">
 <head>
@@ -50,8 +76,7 @@
                 
             </div>
             <div class="nombre">
-                <h1>Daniel Ayala</h1>
-
+                <h1><?php echo $pedidos[0]['nombre_cliente']; ?> (<?php echo $pedidos[0]['alias']; ?>)</h1>
             </div>
             
             
@@ -63,13 +88,14 @@
                     <p>Precio</p>
                     <p>Detalle</p>
                 </div>
-
+                <?php foreach($pedidos as $pedido){ ?>
                 <div class="datos">
-                    <p>#25</p>
-                    <p>2022-11-14</p>
-                    <p>$5,000</p>
-                    <a href="../detallePedidos/index.php">Ver Detalle</a>
+                    <p>#<?php echo $pedido['id_pedido']; ?></p>
+                    <p><?php echo $pedido['fecha']; ?></p>
+                    <p>$<?php echo number_format((float)$pedido['total'],0,".",","); ?></p>
+                    <a href="../detallePedidos/index.php?pedido=<?php echo $pedido['id_pedido']; ?>">Ver Detalle</a>
                 </div>
+                <?php } ?>
             </section>    
             
         </div>
