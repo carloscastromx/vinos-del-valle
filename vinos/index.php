@@ -1,5 +1,24 @@
 <?php 
     session_start();
+
+    $server = "localhost";
+    $user= "u480286810_Raul";
+    $pass_bd = "wEbwo4-robmew-mivnir";
+    $bd = "u480286810_VDV";
+
+    $conexion = new mysqli($server,$user,$pass_bd,$bd);
+
+    if ($conexion->connect_error) {
+        die($conexion->connect_error);
+    } else {
+        $query = "SELECT id_vinos, vinos.nombre as nom_vino, vinedo.nombre as nom_vinedo, imagen, precio FROM vinos INNER JOIN vinedo on vinedo.id_vinedo = vinos.id_vinedo ORDER BY id_vinos ASC";
+        $res_sql = mysqli_query($conexion,$query);
+        $vinos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
+
+        mysqli_free_result($res_sql);
+
+        mysqli_close($conexion);
+    }
 ?>
 <html lang="es-mx">
 <head>
@@ -62,40 +81,25 @@
             <div class="categoria">
                 POPULARES
             </div>
-            <div class="prod1">
-                <div class="overlap-group-container">
-                    <div class="image-container">
-                        <!-- Carlos aqui muestra algunos vinos dinamicamente -->
-                        <img class="vinoImg" src="imagenesVinos/vinoImg.png" alt="image 3"/>
-                        <img class="copaImg" src="imagenesVinos/copaImg.png" alt="imgae 4"/>
-                    </div>
-                    <div class="overlap-group">
-                        <div class="overlap-group-1">
-                            <div class="titulo-1 valgin-text-middle leaguespartan-normal-almond-36px">Producto1</div>
-                            <div class="titulo-2 valgin-text-middle librebaskerville-normal-pink-swan-16px">Viñedo de Procedencia</div>
-                            <img class="favIcon" src="imagenesVinos/favIcon.png" alt="image 5"/>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="prod1">
-                    <div class="overlap-group-container">
-                        <div class="image-container">
-                            <img class="vinoImg" src="imagenesVinos/vinoImg.png" alt="image 3"/>
-                            <img class="copaImg" src="imagenesVinos/copaImg.png" alt="imgae 4"/>
-                        </div>
-                        <div class="overlap-group">
-                            <div class="overlap-group-1">
-                                <div class="titulo-1 valgin-text-middle leaguespartan-normal-almond-36px">Producto1</div>
-                                <div class="titulo-2 valgin-text-middle librebaskerville-normal-pink-swan-16px">Viñedo de Procedencia</div>
-                                <img class="favIcon" src="imagenesVinos/favIcon.png" alt="image 5"/>
+            <div class="vinos-cont">
+            <?php foreach($vinos as $vino){ ?>
+                    <a class="prod1" href="../producto/producto.php?vino=<?php echo $vino['id_vinos']; ?>">
+                        <div class="overlap-group-container">
+                            <div class="image-container">
+                                <img class="vinoImg" src="https://vinosdelvalle.store/imagenes/vinos/<?php echo ucfirst(strtolower($vino['imagen'])) ; ?>" alt="<?php echo $vino['nom_vino']; ?>"/>
                             </div>
-                            <div class="titulo-3">$150.59</div>
+                            <div class="overlap-group">
+                                <div class="overlap-group-1">
+                                    <div class="titulo-1 valgin-text-middle leaguespartan-normal-almond-36px"><?php echo $vino['nom_vino']; ?></div>
+                                    <div class="titulo-2 valgin-text-middle librebaskerville-normal-pink-swan-16px"><?php echo $vino['nom_vinedo']; ?></div>
+                                    <img class="favIcon" src="https://vinosdelvalle.store/imagenes/favIcon.png" alt="image 5"/>
+                                </div>
+                                <div class="titulo-3">$<?php echo number_format((float)$vino['precio'],0,".",","); ?></div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </a>
+            <?php } ?>
             </div>
-            
         </div>
     </div>
    
