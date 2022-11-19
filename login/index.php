@@ -114,7 +114,11 @@
             </div>
         </form>
     </div>
-
+<?php if(isset($_GET['exito'])){ ?>
+    <script>
+        setTimeout(() => window.location.href = "https://vinosdelvalle.store/User/index.php", 1500);
+    </script>
+    <?php } ?>
     
 </body>
 </html>
