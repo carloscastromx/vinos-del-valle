@@ -23,6 +23,7 @@
 
             if($filas_query > 0){
                 $_SESSION["login"] = '1';
+                $_SESSION['user-id'] = $correo;
                 header("Location: https://vinosdelvalle.store/login/index.php?exito=Inicio de sesión exitoso");
                 exit();
             } else {

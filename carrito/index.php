@@ -39,6 +39,8 @@
         foreach($vinos as $vino){
             $total_precio += (float)$cant_array[$vino['id_vinos']] * (float)$vino['precio'];
         }
+
+        $_SESSION['total'] = $total_precio;
     }
 
 ?>
@@ -164,7 +166,7 @@
             </section>
 
             <div class="btn-carrito-row">
-                <a href="#" class="boton-pago">Comprar</a>
+                <a href="procesar.php" class="boton-pago">Comprar</a>
             </div>        
         </section>
     </section>
