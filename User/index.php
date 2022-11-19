@@ -39,7 +39,6 @@
     <link rel="stylesheet" href="../css/user/user.css">
 </head>
 <body>
-<?php print_r($pedidos); ?>
     <header>
         <div class="contenedor">
             <div class="fila">
@@ -94,7 +93,7 @@
                     <p>#<?php echo $pedido['id_pedido']; ?></p>
                     <p><?php echo $pedido['fecha']; ?></p>
                     <p>$<?php echo number_format((float)$pedido['total'],0,".",","); ?></p>
-                    <a href="../detallePedidos/index.php?=<?php echo $pedido['id_pedido']; ?>">Ver Detalle</a>
+                    <a href="../detallePedidos/index.php?pedido=<?php echo $pedido['id_pedido']; ?>">Ver Detalle</a>
                 </div>
                 <?php } ?>
             </section>    

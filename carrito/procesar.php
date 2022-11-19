@@ -22,9 +22,7 @@
         $query = "SELECT id_clientes FROM clientes WHERE correo = '$mail_usuario' LIMIT 1";
 
         $res_sql = mysqli_query($conexion,$query);
-        if($res_sql == false){
-            die(mysqli_error($conexion));
-        }
+        
         $datos = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
 
         mysqli_free_result($res_sql);
@@ -40,17 +38,12 @@
         VALUES($id_clien,'$total_pedido','$fecha_pedido')";
 
         $res_sql = mysqli_query($conexion,$query);
-        if($res_sql == false){
-            die(mysqli_error($conexion));
-        }
 
         mysqli_free_result($res_sql);
 
         $query = "SELECT * FROM pedidos ORDER BY id_pedido DESC LIMIT 1";
         $res_sql = mysqli_query($conexion,$query);
-        if($res_sql == false){
-            die(mysqli_error($conexion));
-        }
+
         $id_pedido_reciente = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
 
         mysqli_free_result($res_sql);
@@ -64,9 +57,7 @@
 
         $query = "SELECT * FROM vinos WHERE id_vinos IN ($ids_vinos)";
         $res_sql = mysqli_query($conexion,$query);
-        if($res_sql == false){
-            die(mysqli_error($conexion));
-        }
+
         $resultados = mysqli_fetch_all($res_sql,MYSQLI_ASSOC);
 
         mysqli_free_result($res_sql);
@@ -80,9 +71,7 @@
             $query = "INSERT INTO info_pedidos(id_pedido, id_vino, cant, subtotal)
             VALUES('$id_pedido', '$id_vino', '$piezas', '$precio_vino')";
             $res_sql = mysqli_query($conexion,$query);
-            if($res_sql == false){
-                die(mysqli_error($conexion));
-            }
+
             mysqli_free_result($res_sql);
         }
 

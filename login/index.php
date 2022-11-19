@@ -1,6 +1,11 @@
 <?php 
     session_start();
 
+    if(isset($_SESSION["login"])){
+        header("Location: https://vinosdelvalle.store/User/index.php");
+        exit();
+    }
+
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $server = "localhost";
         $user= "u480286810_Raul";
